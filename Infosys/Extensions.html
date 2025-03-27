@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)chrome://extensions/shortcuts -->
+<html dir="ltr" lang="en" class="focus-outline-visible"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="color-scheme" content="light dark">
+  <title>Extensions</title>
+  <!--<base href="chrome://extensions">--><base href=".">
+  <link rel="stylesheet" href="chrome://resources/css/md_colors.css">
+  <style>
+    html {
+      /* Remove 300ms delay for 'click' event, when using touch interface. */
+      touch-action: manipulation;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        background: var(--md-background-color);
+      }
+    }
+
+    /* Mimics the developer mode toolbar until the real one loads. Note:
+     * .in-dev-mode is applied by i18n{loadTimeClasses}. */
+    html.loading.in-dev-mode body::before {
+      box-sizing: border-box;
+      content: '';
+      display: block;
+      border-bottom: var(--md-toolbar-border);
+      height: calc(var(--md-toolbar-height) + 58px);
+    }
+
+    html,
+    body {
+      height: 100%;
+      line-height: 154%;
+      margin: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+  </style>
+  <script type="module" src="chrome://extensions/extensions.js"></script>
+<cr-iconset name="cr20" size="20"><template shadowrootmode="open"><!---->
+<svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 20 20">
+ </svg>
+<slot></slot>
+</template>
+  <svg>
+    <defs>
+      <!--
+      Keep these in sorted order by id="".
+      -->
+      <g id="block">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM2 10C2 5.58 5.58 2 10 2C11.85 2 13.55 2.63 14.9 3.69L3.69 14.9C2.63 13.55 2 11.85 2 10ZM5.1 16.31C6.45 17.37 8.15 18 10 18C14.42 18 18 14.42 18 10C18 8.15 17.37 6.45 16.31 5.1L5.1 16.31Z">
+        </path>
+      </g>
+      <g id="cloud-off">
+        <path d="M16 18.125L13.875 16H5C3.88889 16 2.94444 15.6111 2.16667 14.8333C1.38889 14.0556 1 13.1111 1 12C1 10.9444 1.36111 10.0347 2.08333 9.27083C2.80556 8.50694 3.6875 8.09028 4.72917 8.02083C4.77083 7.86805 4.8125 7.72222 4.85417 7.58333C4.90972 7.44444 4.97222 7.30555 5.04167 7.16667L1.875 4L2.9375 2.9375L17.0625 17.0625L16 18.125ZM5 14.5H12.375L6.20833 8.33333C6.15278 8.51389 6.09722 8.70139 6.04167 8.89583C6 9.07639 5.95139 9.25694 5.89583 9.4375L4.83333 9.52083C4.16667 9.57639 3.61111 9.84028 3.16667 10.3125C2.72222 10.7708 2.5 11.3333 2.5 12C2.5 12.6944 2.74306 13.2847 3.22917 13.7708C3.71528 14.2569 4.30556 14.5 5 14.5ZM17.5 15.375L16.3958 14.2917C16.7153 14.125 16.9792 13.8819 17.1875 13.5625C17.3958 13.2431 17.5 12.8889 17.5 12.5C17.5 11.9444 17.3056 11.4722 16.9167 11.0833C16.5278 10.6944 16.0556 10.5 15.5 10.5H14.125L14 9.14583C13.9028 8.11806 13.4722 7.25694 12.7083 6.5625C11.9444 5.85417 11.0417 5.5 10 5.5C9.65278 5.5 9.31944 5.54167 9 5.625C8.69444 5.70833 8.39583 5.82639 8.10417 5.97917L7.02083 4.89583C7.46528 4.61806 7.93056 4.40278 8.41667 4.25C8.91667 4.08333 9.44444 4 10 4C11.4306 4 12.6736 4.48611 13.7292 5.45833C14.7847 6.41667 15.375 7.59722 15.5 9C16.4722 9 17.2986 9.34028 17.9792 10.0208C18.6597 10.7014 19 11.5278 19 12.5C19 13.0972 18.8611 13.6458 18.5833 14.1458C18.3194 14.6458 17.9583 15.0556 17.5 15.375Z">
+        </path>
+      </g>
+      <g id="delete">
+        <path d="M 5.832031 17.5 C 5.375 17.5 4.984375 17.335938 4.65625 17.011719 C 4.328125 16.683594 4.167969 16.292969 4.167969 15.832031 L 4.167969 5 L 3.332031 5 L 3.332031 3.332031 L 7.5 3.332031 L 7.5 2.5 L 12.5 2.5 L 12.5 3.332031 L 16.667969 3.332031 L 16.667969 5 L 15.832031 5 L 15.832031 15.832031 C 15.832031 16.292969 15.671875 16.683594 15.34375 17.011719 C 15.015625 17.335938 14.625 17.5 14.167969 17.5 Z M 14.167969 5 L 5.832031 5 L 5.832031 15.832031 L 14.167969 15.832031 Z M 7.5 14.167969 L 9.167969 14.167969 L 9.167969 6.667969 L 7.5 6.667969 Z M 10.832031 14.167969 L 12.5 14.167969 L 12.5 6.667969 L 10.832031 6.667969 Z M 5.832031 5 L 5.832031 15.832031 Z M 5.832031 5 ">
+        </path>
+      </g>
+      <g id="domain" viewBox="0 -960 960 960">
+        <path d="M96-144v-672h384v144h384v528H96Zm72-72h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm168 456h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm144 456h312v-384H480v80h72v72h-72v80h72v72h-72v80Zm168-232v-72h72v72h-72Zm0 152v-72h72v72h-72Z"></path>
+      </g>
+      <g id="kite">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6327 8.00094L10.3199 2L16 8.00094L10.1848 16.8673C10.0995 16.9873 10.0071 17.1074 9.90047 17.2199C9.42417 17.7225 8.79147 18 8.11611 18C7.44076 18 6.80806 17.7225 6.33175 17.2199C5.85545 16.7173 5.59242 16.0497 5.59242 15.3371C5.59242 14.977 5.46445 14.647 5.22275 14.3919C4.98104 14.1369 4.66825 14.0019 4.32701 14.0019H4V12.6667H4.32701C5.00237 12.6667 5.63507 12.9442 6.11137 13.4468C6.58768 13.9494 6.85071 14.617 6.85071 15.3296C6.85071 15.6896 6.97867 16.0197 7.22038 16.2747C7.46209 16.5298 7.77488 16.6648 8.11611 16.6648C8.45735 16.6648 8.77014 16.5223 9.01185 16.2747C9.02396 16.2601 9.03607 16.246 9.04808 16.2319C9.08541 16.1883 9.12176 16.1458 9.15403 16.0947L9.55213 15.4946L4.6327 8.00094ZM10.3199 13.9371L6.53802 8.17116L10.3199 4.1814L14.0963 8.17103L10.3199 13.9371Z">
+        </path>
+      </g>
+      <g id="menu">
+        <path d="M2 4h16v2H2zM2 9h16v2H2zM2 14h16v2H2z"></path>
+      </g>
+      <g id="password">
+        <path d="M5.833 11.667c.458 0 .847-.16 1.167-.479.333-.333.5-.729.5-1.188s-.167-.847-.5-1.167a1.555 1.555 0 0 0-1.167-.5c-.458 0-.854.167-1.188.5A1.588 1.588 0 0 0 4.166 10c0 .458.16.854.479 1.188.333.319.729.479 1.188.479Zm0 3.333c-1.389 0-2.569-.486-3.542-1.458C1.319 12.569.833 11.389.833 10c0-1.389.486-2.569 1.458-3.542C3.264 5.486 4.444 5 5.833 5c.944 0 1.813.243 2.604.729a4.752 4.752 0 0 1 1.833 1.979h7.23c.458 0 .847.167 1.167.5.333.319.5.708.5 1.167v3.958c0 .458-.167.854-.5 1.188A1.588 1.588 0 0 1 17.5 15h-3.75a1.658 1.658 0 0 1-1.188-.479 1.658 1.658 0 0 1-.479-1.188v-1.042H10.27a4.59 4.59 0 0 1-1.813 2A5.1 5.1 0 0 1 5.833 15Zm3.292-4.375h4.625v2.708H15v-1.042a.592.592 0 0 1 .167-.438.623.623 0 0 1 .458-.188c.181 0 .327.063.438.188a.558.558 0 0 1 .188.438v1.042H17.5V9.375H9.125a3.312 3.312 0 0 0-1.167-1.938 3.203 3.203 0 0 0-2.125-.77 3.21 3.21 0 0 0-2.354.979C2.827 8.298 2.5 9.083 2.5 10s.327 1.702.979 2.354a3.21 3.21 0 0 0 2.354.979c.806 0 1.514-.25 2.125-.75.611-.514 1-1.167 1.167-1.958Z"></path>
+      </g>
+      
+  </defs></svg>
+</cr-iconset><cr-iconset name="cr" size="24"><template shadowrootmode="open"><!---->
+<svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 24 24">
+ </svg>
+<slot></slot>
+</template>
+  <svg>
+    <defs>
+      <!--
+      These icons are copied from Polymer's iron-icons and kept in sorted order.
+      -->
+      <g id="add">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+      </g>
+      <g id="arrow-back">
+        <path d="m7.824 13 5.602 5.602L12 20l-8-8 8-8 1.426 1.398L7.824 11H20v2Zm0 0">
+        </path>
+      </g>
+      <g id="arrow-drop-up">
+        <path d="M7 14l5-5 5 5z"></path>
+      </g>
+      <g id="arrow-drop-down">
+        <path d="M7 10l5 5 5-5z"></path>
+      </g>
+      <g id="arrow-forward">
+        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+        </path>
+      </g>
+      <g id="arrow-right">
+        <path d="M10 7l5 5-5 5z"></path>
+      </g>
+      <g id="cancel">
+        <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z">
+        </path>
+      </g>
+      <g id="check">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+      </g>
+      <g id="check-circle" viewBox="0 -960 960 960">
+        <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"></path>
+      </g>
+      <g id="chevron-left">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+      </g>
+      <g id="chevron-right">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+      </g>
+      <g id="clear">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+        </path>
+      </g>
+      <g id="chrome-product" viewBox="0 -960 960 960">
+        <path d="M336-479q0 60 42 102t102 42q60 0 102-42t42-102q0-60-42-102t-102-42q-60 0-102 42t-42 102Zm144 216q11 0 22.5-.5T525-267L427-99q-144-16-237.5-125T96-479q0-43 9.5-84.5T134-645l160 274q28 51 78 79.5T480-263Zm0-432q-71 0-126.5 42T276-545l-98-170q53-71 132.5-109.5T480-863q95 0 179 45t138 123H480Zm356 72q15 35 21.5 71t6.5 73q0 155-100 260.5T509-96l157-275q14-25 22-52t8-56q0-40-15-77t-41-67h196Z">
+        </path>
+      </g>
+      <g id="close">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+        </path>
+      </g>
+      <g id="computer">
+        <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z">
+        </path>
+      </g>
+      <g id="create">
+        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z">
+        </path>
+      </g>
+      <g id="delete" viewBox="0 -960 960 960">
+        <path d="M309.37-135.87q-34.48 0-58.74-24.26-24.26-24.26-24.26-58.74v-474.5h-53.5v-83H378.5v-53.5h202.52v53.5h206.11v83h-53.5v474.07q0 35.21-24.26 59.32t-58.74 24.11H309.37Zm341.26-557.5H309.37v474.5h341.26v-474.5ZM379.7-288.24h77.5v-336h-77.5v336Zm123.1 0h77.5v-336h-77.5v336ZM309.37-693.37v474.5-474.5Z">
+        </path>
+      </g>
+      <g id="domain">
+        <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z">
+        </path>
+      </g>
+      <!-- source: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:family_link:FILL@0;wght@0;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed -->
+      <g id="kite" viewBox="0 -960 960 960">
+        <path d="M390-40q-51 0-90.5-30.5T246-149q-6-23-25-37t-43-14q-16 0-30 6.5T124-175l-61-51q21-26 51.5-40t63.5-14q51 0 91 30t54 79q6 23 25 37t42 14q19 0 34-10t26-25l1-2-276-381q-8-11-11.5-23t-3.5-24q0-16 6-30.5t18-26.5l260-255q11-11 26-17t30-6q15 0 30 6t26 17l260 255q12 12 18 26.5t6 30.5q0 12-3.5 24T825-538L500-88q-18 25-48 36.5T390-40Zm110-185 260-360-260-255-259 256 259 359Zm1-308Z"></path>
+        
+      </g>
+      <g id="error">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+        </path>
+      </g>
+      <g id="error-outline">
+        <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+        </path>
+      </g>
+      <g id="expand-less">
+        <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+      </g>
+      <g id="expand-more">
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+      </g>
+      <g id="extension">
+        <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z">
+        </path>
+      </g>
+      <g id="file-download" viewBox="0 -960 960 960">
+        <path d="M480-336 288-528l51-51 105 105v-342h72v342l105-105 51 51-192 192ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z"></path>
+      </g>
+      <g id="fullscreen">
+        <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z">
+        </path>
+      </g>
+      <g id="group">
+        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z">
+        </path>
+      </g>
+      <g id="help-outline">
+        <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+        </path>
+      </g>
+      <g id="history">
+        <path d="M12.945312 22.75 C 10.320312 22.75 8.074219 21.839844 6.207031 20.019531 C 4.335938 18.199219 3.359375 15.972656 3.269531 13.34375 L 5.089844 13.34375 C 5.175781 15.472656 5.972656 17.273438 7.480469 18.742188 C 8.988281 20.210938 10.808594 20.945312 12.945312 20.945312 C 15.179688 20.945312 17.070312 20.164062 18.621094 18.601562 C 20.167969 17.039062 20.945312 15.144531 20.945312 12.910156 C 20.945312 10.714844 20.164062 8.855469 18.601562 7.335938 C 17.039062 5.816406 15.15625 5.054688 12.945312 5.054688 C 11.710938 5.054688 10.554688 5.339844 9.480469 5.902344 C 8.402344 6.46875 7.476562 7.226562 6.699219 8.179688 L 9.585938 8.179688 L 9.585938 9.984375 L 3.648438 9.984375 L 3.648438 4.0625 L 5.453125 4.0625 L 5.453125 6.824219 C 6.386719 5.707031 7.503906 4.828125 8.804688 4.199219 C 10.109375 3.566406 11.488281 3.25 12.945312 3.25 C 14.300781 3.25 15.570312 3.503906 16.761719 4.011719 C 17.949219 4.519531 18.988281 5.214844 19.875 6.089844 C 20.761719 6.964844 21.464844 7.992188 21.976562 9.167969 C 22.492188 10.34375 22.75 11.609375 22.75 12.964844 C 22.75 14.316406 22.492188 15.589844 21.976562 16.777344 C 21.464844 17.964844 20.761719 19.003906 19.875 19.882812 C 18.988281 20.765625 17.949219 21.464844 16.761719 21.976562 C 15.570312 22.492188 14.300781 22.75 12.945312 22.75 Z M 16.269531 17.460938 L 12.117188 13.34375 L 12.117188 7.527344 L 13.921875 7.527344 L 13.921875 12.601562 L 17.550781 16.179688 Z M 16.269531 17.460938">
+        </path>
+      </g>
+      <g id="info">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
+        </path>
+      </g>
+      <g id="info-outline">
+        <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z">
+        </path>
+      </g>
+      <g id="insert-drive-file">
+        <path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z">
+        </path>
+      </g>
+      <g id="location-on">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+        </path>
+      </g>
+      <g id="mic">
+        <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z">
+        </path>
+      </g>
+      <g id="more-vert">
+        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+        </path>
+      </g>
+      <g id="open-in-new" viewBox="0 -960 960 960">
+        <path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h528v-264h72v264q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm171-192-51-51 357-357H576v-72h240v240h-72v-117L387-336Z">
+        </path>
+      </g>
+      <g id="person">
+        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+        </path>
+      </g>
+      <g id="phonelink">
+        <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z">
+        </path>
+      </g>
+      <g id="print">
+        <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z">
+        </path>
+      </g>
+      <g id="schedule">
+        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z">
+        </path>
+      </g>
+      <g id="search">
+        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+        </path>
+      </g>
+      <g id="security">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z">
+        </path>
+      </g>
+      <!-- The <g> IDs are exposed as global variables in Vulcanized mode, which
+        conflicts with the "settings" namespace of MD Settings. Using an "_icon"
+        suffix prevents the naming conflict. -->
+      <g id="settings_icon">
+        <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z">
+        </path>
+      </g>
+      <g id="star">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+        </path>
+      </g>
+      <g id="sync" viewBox="0 -960 960 960">
+        <path d="M216-192v-72h74q-45-40-71.5-95.5T192-480q0-101 61-177.5T408-758v75q-63 23-103.5 77.5T264-480q0 48 19.5 89t52.5 70v-63h72v192H216Zm336-10v-75q63-23 103.5-77.5T696-480q0-48-19.5-89T624-639v63h-72v-192h192v72h-74q45 40 71.5 95.5T768-480q0 101-61 177.5T552-202Z">
+        </path>
+      </g>
+      <g id="thumbs-down">
+        <path d="M6 3h11v13l-7 7-1.25-1.25a1.454 1.454 0 0 1-.3-.475c-.067-.2-.1-.392-.1-.575v-.35L9.45 16H3c-.533 0-1-.2-1.4-.6-.4-.4-.6-.867-.6-1.4v-2c0-.117.017-.242.05-.375s.067-.258.1-.375l3-7.05c.15-.333.4-.617.75-.85C5.25 3.117 5.617 3 6 3Zm9 2H6l-3 7v2h9l-1.35 5.5L15 15.15V5Zm0 10.15V5v10.15Zm2 .85v-2h3V5h-3V3h5v13h-5Z">
+        </path>
+      </g>
+      <g id="thumbs-down-filled">
+        <path d="M6 3h10v13l-7 7-1.25-1.25a1.336 1.336 0 0 1-.29-.477 1.66 1.66 0 0 1-.108-.574v-.347L8.449 16H3c-.535 0-1-.2-1.398-.602C1.199 15 1 14.535 1 14v-2c0-.117.012-.242.04-.375.022-.133.062-.258.108-.375l3-7.05c.153-.333.403-.618.75-.848A1.957 1.957 0 0 1 6 3Zm12 13V3h4v13Zm0 0">
+        </path>
+      </g>
+      <g id="thumbs-up">
+        <path d="M18 21H7V8l7-7 1.25 1.25c.117.117.208.275.275.475.083.2.125.392.125.575v.35L14.55 8H21c.533 0 1 .2 1.4.6.4.4.6.867.6 1.4v2c0 .117-.017.242-.05.375s-.067.258-.1.375l-3 7.05c-.15.333-.4.617-.75.85-.35.233-.717.35-1.1.35Zm-9-2h9l3-7v-2h-9l1.35-5.5L9 8.85V19ZM9 8.85V19 8.85ZM7 8v2H4v9h3v2H2V8h5Z">
+        </path>
+      </g>
+      <g id="thumbs-up-filled">
+        <path d="M18 21H8V8l7-7 1.25 1.25c.117.117.21.273.29.477.073.199.108.39.108.574v.347L15.551 8H21c.535 0 1 .2 1.398.602C22.801 9 23 9.465 23 10v2c0 .117-.012.242-.04.375a1.897 1.897 0 0 1-.108.375l-3 7.05a2.037 2.037 0 0 1-.75.848A1.957 1.957 0 0 1 18 21ZM6 8v13H2V8Zm0 0">
+      </path></g>
+      <g id="videocam" viewBox="0 -960 960 960">
+        <path d="M216-192q-29 0-50.5-21.5T144-264v-432q0-29.7 21.5-50.85Q187-768 216-768h432q29.7 0 50.85 21.15Q720-725.7 720-696v168l144-144v384L720-432v168q0 29-21.15 50.5T648-192H216Zm0-72h432v-432H216v432Zm0 0v-432 432Z">
+        </path>
+      </g>
+      <g id="warning">
+        <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path>
+      </g>
+    </defs>
+  </svg>
+</cr-iconset><cr-iconset name="extensions-icons" size="24"><template shadowrootmode="open"><!---->
+<svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 24 24">
+ </svg>
+<slot></slot>
+</template>
+<svg>
+<defs>
+  
+  <g id="unpacked">
+    <path class="cls-1" fill="none" d="M0,0H24V24H0V0Z"></path>
+    <circle cx="9" cy="12" r="1"></circle>
+    <path d="M20,5H4A2,2,0,0,0,2,7V17a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A2,2,0,0,0,20,5ZM9,17a5,5,0,1,1,5-5A5,5,0,0,1,9,17Zm11,1a1,1,0,1,1,1-1A1,1,0,0,1,20,18ZM20,8a1,1,0,1,1,1-1A1,1,0,0,1,20,8Z"></path>
+  </g>
+
+  
+  
+  <g id="safebrowsing_warning">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M12 4.24l6 3v4.1c0 3.9-2.55 7.5-6 8.59-3.45-1.09-6-4.7-6-8.59v-4.1l6-3M12 2L4 6v5.33c0 4.93 3.41 9.55 8 10.67 4.59-1.12 8-5.73 8-10.67V6l-8-4zm-1 13h2v2h-2v-2zm2-7h-2v5h2V8z"></path>
+  </g>
+
+  
+  <g id="input"><path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"></path></g>
+  <g id="business"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"></path></g>
+
+  
+  <g id="my_extensions" viewBox="0 -960 960 960"><path d="M216-135.869q-33.287 0-56.709-23.422-23.422-23.422-23.422-56.709v-172.304q37.609-2 63.218-28.424 25.608-26.424 25.608-63.272t-25.608-63.272q-25.609-26.424-63.218-28.424V-744q0-33.287 23.422-56.709 23.422-23.422 56.709-23.422h161.065q2.631-40.956 31.96-69.315 29.329-28.359 70.75-28.359t70.975 28.199q29.554 28.199 32.185 69.475H744q33.287 0 56.709 23.422 23.422 23.422 23.422 56.709v161.065q40.956 2.631 69.315 31.96 28.359 29.329 28.359 70.75t-28.199 70.975q-28.199 29.554-69.475 32.185V-216q0 33.287-23.422 56.709-23.422 23.422-56.709 23.422H216Zm2.87-83.001h522.26v-522.26H218.87v108.652q42.13 22.63 65.597 63.772 23.468 41.141 23.468 88.706 0 49.01-23.468 90.168Q261-348.674 218.87-327.283v108.413ZM480-480Z"></path></g>
+  <g id="site_permissions" viewBox="0 -960 960 960"><path d="M454.087-136.587V-384H533.5v84h288v79.413h-288v84h-79.413Zm-315.587-84V-300h247.413v79.413H138.5Zm144-135.826v-84h-144v-79.174h144v-84h79.413v247.174H282.5Zm147.587-84v-79.174H821.5v79.174H430.087Zm144-135.587v-247.413H653.5v84h168V-660h-168v84h-79.413ZM138.5-660v-79.413h391.413V-660H138.5Z"></path></g>
+  <g id="keyboard_shortcuts" viewBox="0 -960 960 960"><path d="M168-229q-34.483 0-58.741-24.259-24.26-24.258-24.26-58.741v-336q0-34.483 24.26-58.741Q133.517-731 168-731h624q34.483 0 58.741 24.259Q875-682.483 875-648v336q0 34.483-24.259 58.741Q826.483-229 792-229H168Zm0-83h624v-336H168v336Zm168-24h288v-72H336v72Zm-96-120h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm-408-96h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72ZM168-312v-336 336Z"></path></g>
+  <g id="web_store" enable-background="new 0 0 192 192" height="24px" viewBox="0 0 192 192" width="24px"><path fill="none" d="M0 0h192v192H0z"></path><path fill="#F1F3F4" d="M172 28H20v121.63c0 5.72 4.64 10.37 10.37 10.37h131.27c5.72 0 10.37-4.64 10.37-10.37V28z"></path><path fill="#F1F3F4" d="M172 28H20v121.63c0 5.72 4.64 10.37 10.37 10.37h131.27c5.72 0 10.37-4.64 10.37-10.37V28z"></path><path fill="#E8EAED" d="M20 28h152v66.35H20z"></path><path fill="#FFF" d="M113.27 56.34H78.73c-3.82 0-6.91-3.09-6.91-6.91 0-3.82 3.09-6.91 6.91-6.91h34.54c3.82 0 6.91 3.09 6.91 6.91 0 3.81-3.09 6.91-6.91 6.91z"></path><defs><path id="a" d="M172 28H20v121.63c0 5.72 4.64 10.37 10.37 10.37h131.27c5.72 0 10.37-4.64 10.37-10.37V28z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><g clip-path="url(#b)"><lineargradient id="c" x1="39.161" x2="152.841" y1="125.013" y2="125.013" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#d93025"></stop><stop offset="1" style="stop-color:#ea4335"></stop></lineargradient><path fill="url(#c)" d="m39.16 116.8 9.05 27.61 19.38 21.63L96 116.81l56.84-.01C141.49 97.18 120.29 83.99 96 83.99c-24.29 0-45.49 13.19-56.84 32.81z"></path><lineargradient id="d" x1="-3.897" x2="109.806" y1="36.608" y2="36.608" gradientTransform="rotate(-120 100 93.002)" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#1e8e3e"></stop><stop offset="1" style="stop-color:#34a853"></stop></lineargradient><path fill="url(#d)" d="m95.99 215.28 19.38-21.64 9.04-27.6H67.58L39.16 116.8c-11.31 19.64-12.14 44.61.01 65.65 12.14 21.04 34.17 32.81 56.82 32.83z"></path><lineargradient id="e" x1="96.791" x2="210.494" y1="8.387" y2="8.387" gradientTransform="rotate(120 88.856 76)" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#fbbc04"></stop><stop offset="1" style="stop-color:#fcc934"></stop></lineargradient><path fill="url(#e)" d="M152.84 116.81H96l28.42 49.23L96 215.28c22.66-.02 44.69-11.79 56.83-32.83 12.15-21.04 11.32-46 .01-65.64z"></path><ellipse cx="96" cy="149.63" fill="#F1F3F4" rx="32.81" ry="32.82"></ellipse><ellipse cx="96" cy="149.63" fill="#1A73E8" rx="26.66" ry="26.67"></ellipse></g><path fill="#BDC1C6" d="M20 94.35h152v.86H20zM20 93.48h152v.86H20z" opacity=".1"></path></g>
+
+  
+  <g id="extension_off" viewBox="0 -960 960 960"><path d="M791-55 55-791l57-57 736 736-57 57Zm9-219-80-80v-366H354l-80-80h86q0-42 29-71t71-29q42 0 71 29t29 71h160q33 0 56.5 23.5T800-720v160q42 0 71 29t29 71q0 42-29 71t-71 29v86ZM537-537ZM423-423ZM200-120q-33 0-56.5-23.5T120-200v-152q48 0 84-30.5t36-77.5q0-47-36-77.5T120-568v-152q0-17 6-31.5t17-25.5l57 57v88q54 20 87 67t33 105q0 57-33 104t-87 68v88h520l57 57q-11 11-25.5 17t-31.5 6H200Z"></path></g>
+
+  
+  <g id="extension_cloud_upload" viewBox="0 -960 960 960"><path d="M240-192q-80 0-136-56.5T48-385q0-76 51.5-131.5T227-576q23.43-85.75 93.7-138.87Q390.98-768 480-768q107 0 185.5 68.5T744-528q70 0 119 49t49 118q0 70.42-49 119.71Q814-192 744-192H516q-29.7 0-50.85-21.15Q444-234.3 444-264v-174l-57 57-51-51 144-144 144 144-51 51-57-57v174h228q40.32 0 68.16-27.77 27.84-27.78 27.84-68Q840-400 812.16-428q-27.84-28-68.16-28h-72v-72q0-73-57.5-120.5t-135-47.5Q402-696 348-639.5T283-504h-43q-49.71 0-84.86 35.2-35.14 35.2-35.14 85t35.14 84.8q35.15 35 84.86 35h132v72H240Zm240-246Z"></path></g>
+</defs>
+</svg>
+</cr-iconset></head>
+<body>
+  <extensions-manager><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<extensions-drop-overlay hidden=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<div id="container">
+  <cr-icon icon="cr:extension"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 24 24" class="cr-iconset-svg-icon_">
+ <g>
+        <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z">
+        </path>
+      </g></svg><!----></template></cr-icon>
+  <div id="text">Drop to install</div>
+</div>
+<!--_html_template_end_--></template>
+</extensions-drop-overlay>
+<extensions-toolbar id="toolbar" role="banner" can-load-unpacked=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<cr-toolbar id="toolbar" page-name="Extensions" search-prompt="Search extensions" clear-label="Clear search" autofocus="" menu-label="Main menu" narrow-threshold="1000"><template shadowrootmode="open"><!---->
+<div id="leftContent">
+  <div id="leftSpacer">
+    <!--?lit$066521063$-->
+    <slot name="product-logo">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="//resources/images/chrome_logo_dark.svg">
+        <img id="product-logo" srcset="chrome://theme/current-channel-logo@1x 1x,
+                    chrome://theme/current-channel-logo@2x 2x" role="presentation">
+      </picture>
+    </slot>
+    <h1><!--?lit$066521063$-->Extensions</h1>
+  </div>
+</div>
+
+<div id="centeredContent">
+  <cr-toolbar-search-field id="search" label="Search extensions" clear-label="Clear search" autofocus="" icon-override="" input-aria-description=""><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<div id="stateBackground"></div>
+<div id="content">
+  <!--?lit$066521063$-->
+    <cr-icon-button id="icon" suppress-rtl-flip="" iron-icon="cr:search" title="Search extensions" tabindex="-1" aria-hidden="true" role="button" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+<cr-icon><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 24 24" class="cr-iconset-svg-icon_" role="none">
+ <g>
+        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+        </path>
+      </g></svg><!----></template></cr-icon></div></template>
+  </cr-icon-button>
+  <div id="searchTerm">
+    <label id="prompt" for="searchInput" aria-hidden="true">
+      <!--?lit$066521063$-->Search extensions
+    </label>
+    <input id="searchInput" aria-labelledby="prompt" autocapitalize="off" autocomplete="off" type="search" spellcheck="false" aria-description="" autofocus="">
+  </div>
+  <!--?lit$066521063$-->
+</div></template>
+  </cr-toolbar-search-field>
+</div>
+
+<div id="rightContent">
+  <div id="rightSpacer">
+    <slot></slot>
+  </div>
+</div></template>
+  <div class="more-actions">
+    <span id="devModeLabel">Developer mode</span>
+    <cr-tooltip-icon hidden="" tooltip-text="This setting is managed by your administrator." icon-class="cr20:domain" icon-aria-label="This setting is managed by your administrator."><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="This setting is managed by your administrator." icon="cr20:domain"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_">
+ <g viewBox="0 -960 960 960">
+        <path d="M96-144v-672h384v144h384v528H96Zm72-72h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm168 456h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm144 456h312v-384H480v80h72v72h-72v80h72v72h-72v80Zm168-232v-72h72v72h-72Zm0 152v-72h72v72h-72Z"></path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$-->This setting is managed by your administrator.</slot>
+</cr-tooltip></template>
+    </cr-tooltip-icon>
+    <cr-toggle id="devMode" aria-labelledby="devModeLabel" role="button" tabindex="0" aria-pressed="false" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+    </cr-toggle>
+  </div>
+</cr-toolbar>
+<!--?lit$066521063$-->
+<div id="devDrawer" hidden="">
+  <div id="buttonStrip">
+    <cr-button id="loadUnpacked" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+      Load unpacked
+    </cr-button>
+    <cr-button id="packExtensions" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+      Pack extension
+    </cr-button>
+    <cr-button id="updateNow" title="Update extensions now" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+      Update
+    </cr-button>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+</extensions-toolbar>
+<!--?lit$066521063$-->
+<div id="cr-container-shadow-top" class="cr-container-shadow"></div><div id="container" class="can-scroll scrolled-to-top"><div></div>
+  <div id="left">
+    <extensions-sidebar role="navigation"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<cr-menu-selector id="sectionMenu" selected-attribute="selected" attr-for-selected="data-path" role="menu"><template shadowrootmode="open"><!----><slot></slot></template>
+  <!-- Values for "data-path" attribute must match the "Page" enum. -->
+  <a role="menuitem" class="cr-nav-menu-item" id="sectionsExtensions" href="chrome://extensions/" data-path="items-list" data-selection-index="0">
+    <cr-icon icon="extensions-icons:my_extensions"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_">
+ <g viewBox="0 -960 960 960"><path d="M216-135.869q-33.287 0-56.709-23.422-23.422-23.422-23.422-56.709v-172.304q37.609-2 63.218-28.424 25.608-26.424 25.608-63.272t-25.608-63.272q-25.609-26.424-63.218-28.424V-744q0-33.287 23.422-56.709 23.422-23.422 56.709-23.422h161.065q2.631-40.956 31.96-69.315 29.329-28.359 70.75-28.359t70.975 28.199q29.554 28.199 32.185 69.475H744q33.287 0 56.709 23.422 23.422 23.422 23.422 56.709v161.065q40.956 2.631 69.315 31.96 28.359 29.329 28.359 70.75t-28.199 70.975q-28.199 29.554-69.475 32.185V-216q0 33.287-23.422 56.709-23.422 23.422-56.709 23.422H216Zm2.87-83.001h522.26v-522.26H218.87v108.652q42.13 22.63 65.597 63.772 23.468 41.141 23.468 88.706 0 49.01-23.468 90.168Q261-348.674 218.87-327.283v108.413ZM480-480Z"></path></g></svg><!----></template></cr-icon>
+    My extensions
+    <cr-ripple><template shadowrootmode="open"><!----></template></cr-ripple>
+  </a>
+  <a role="menuitem" class="cr-nav-menu-item" id="sectionsSitePermissions" href="chrome://extensions/sitePermissions" data-path="site-permissions" hidden="" data-selection-index="1">
+    <cr-icon icon="extensions-icons:site_permissions"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_">
+ <g viewBox="0 -960 960 960"><path d="M454.087-136.587V-384H533.5v84h288v79.413h-288v84h-79.413Zm-315.587-84V-300h247.413v79.413H138.5Zm144-135.826v-84h-144v-79.174h144v-84h79.413v247.174H282.5Zm147.587-84v-79.174H821.5v79.174H430.087Zm144-135.587v-247.413H653.5v84h168V-660h-168v84h-79.413ZM138.5-660v-79.413h391.413V-660H138.5Z"></path></g></svg><!----></template></cr-icon>
+    Site permissions
+    <cr-ripple><template shadowrootmode="open"><!----></template></cr-ripple>
+  </a>
+  <a role="menuitem" class="cr-nav-menu-item selected" id="sectionsShortcuts" href="chrome://extensions/shortcuts" data-path="keyboard-shortcuts" data-selection-index="2" selected="" aria-current="page">
+    <cr-icon icon="extensions-icons:keyboard_shortcuts"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_">
+ <g viewBox="0 -960 960 960"><path d="M168-229q-34.483 0-58.741-24.259-24.26-24.258-24.26-58.741v-336q0-34.483 24.26-58.741Q133.517-731 168-731h624q34.483 0 58.741 24.259Q875-682.483 875-648v336q0 34.483-24.259 58.741Q826.483-229 792-229H168Zm0-83h624v-336H168v336Zm168-24h288v-72H336v72Zm-96-120h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm-408-96h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72Zm102 0h72v-72h-72v72ZM168-312v-336 336Z"></path></g></svg><!----></template></cr-icon>
+      Keyboard shortcuts
+    <cr-ripple><template shadowrootmode="open"><!----></template></cr-ripple>
+  </a>
+</cr-menu-selector>
+<div class="separator"></div>
+<div class="cr-nav-menu-item" id="moreExtensions">
+  <cr-icon id="web-store-icon" icon="extensions-icons:web_store"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 192 192" class="cr-iconset-svg-icon_">
+ <g enable-background="new 0 0 192 192" height="24px" viewBox="0 0 192 192" width="24px"><path fill="none" d="M0 0h192v192H0z"></path><path fill="#F1F3F4" d="M172 28H20v121.63c0 5.72 4.64 10.37 10.37 10.37h131.27c5.72 0 10.37-4.64 10.37-10.37V28z"></path><path fill="#F1F3F4" d="M172 28H20v121.63c0 5.72 4.64 10.37 10.37 10.37h131.27c5.72 0 10.37-4.64 10.37-10.37V28z"></path><path fill="#E8EAED" d="M20 28h152v66.35H20z"></path><path fill="#FFF" d="M113.27 56.34H78.73c-3.82 0-6.91-3.09-6.91-6.91 0-3.82 3.09-6.91 6.91-6.91h34.54c3.82 0 6.91 3.09 6.91 6.91 0 3.81-3.09 6.91-6.91 6.91z"></path><defs><path id="a" d="M172 28H20v121.63c0 5.72 4.64 10.37 10.37 10.37h131.27c5.72 0 10.37-4.64 10.37-10.37V28z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><g clip-path="url(#b)"><lineargradient id="c" x1="39.161" x2="152.841" y1="125.013" y2="125.013" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#d93025"></stop><stop offset="1" style="stop-color:#ea4335"></stop></lineargradient><path fill="url(#c)" d="m39.16 116.8 9.05 27.61 19.38 21.63L96 116.81l56.84-.01C141.49 97.18 120.29 83.99 96 83.99c-24.29 0-45.49 13.19-56.84 32.81z"></path><lineargradient id="d" x1="-3.897" x2="109.806" y1="36.608" y2="36.608" gradientTransform="rotate(-120 100 93.002)" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#1e8e3e"></stop><stop offset="1" style="stop-color:#34a853"></stop></lineargradient><path fill="url(#d)" d="m95.99 215.28 19.38-21.64 9.04-27.6H67.58L39.16 116.8c-11.31 19.64-12.14 44.61.01 65.65 12.14 21.04 34.17 32.81 56.82 32.83z"></path><lineargradient id="e" x1="96.791" x2="210.494" y1="8.387" y2="8.387" gradientTransform="rotate(120 88.856 76)" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#fbbc04"></stop><stop offset="1" style="stop-color:#fcc934"></stop></lineargradient><path fill="url(#e)" d="M152.84 116.81H96l28.42 49.23L96 215.28c22.66-.02 44.69-11.79 56.83-32.83 12.15-21.04 11.32-46 .01-65.64z"></path><ellipse cx="96" cy="149.63" fill="#F1F3F4" rx="32.81" ry="32.82"></ellipse><ellipse cx="96" cy="149.63" fill="#1A73E8" rx="26.66" ry="26.67"></ellipse></g><path fill="#BDC1C6" d="M20 94.35h152v.86H20zM20 93.48h152v.86H20z" opacity=".1"></path></g></svg><!----></template>
+  </cr-icon>
+  <span id="discover-more-text" class="cr-secondary-text">Discover more extensions and themes on the <a target="_blank" href="https://chromewebstore.google.com/category/extensions?utm_source=ext_sidebar&amp;hl=en-US">Chrome Web Store</a> </span>
+  <cr-ripple><template shadowrootmode="open"><!----></template></cr-ripple>
+</div>
+<!--_html_template_end_--></template>
+    </extensions-sidebar>
+  </div>
+  <cr-view-manager id="viewManager" role="main"><template shadowrootmode="open"><!----><slot name="view"></slot></template>
+    <extensions-item-list id="items-list" slot="view" class=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<div id="container">
+  <managed-footnote managed-by-icon_=""><template shadowrootmode="open"><!----><!--?lit$066521063$--><!--?--></template></managed-footnote>
+  <div id="content-wrapper" style="--max-columns: 3;">
+    <!--?lit$066521063$-->
+
+    <!--?lit$066521063$-->
+
+    <div id="no-items" class="empty-list-message" hidden="">
+      <span>
+        Find extensions and themes in the <a target="_blank" href="https://chrome.google.com/webstore/category/extensions">Chrome Web Store</a>
+      </span>
+    </div>
+    <div id="no-search-results" class="empty-list-message" hidden="">
+      <span>No search results found</span>
+    </div>
+
+    <div id="extensions-section">
+      <!-- section-header needs to left-align with the grid content below, and
+           the easiest way to achieve this is to make it a grid as well. -->
+      <h2 class="section-header items-container">
+        All Extensions
+      </h2>
+      <div class="items-container">
+        <!-- Render only a few items first, to improve initial render time,
+             then render the remaining items on a different frame. Value of 6
+             was chosen by experimentation, and it is a good trade-off between
+             initial render time and total render time. -->
+        <!--?lit$066521063$--><!---->
+          <extensions-item id="inomeogfingihgjfjlpeplalcfajhgai"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<!-- Invisible instead of hidden because VoiceOver refuses to read text of
+  element that's hidden when referenced by an aria label.  Unfortunately,
+  this text can be found by Ctrl + F because it isn't hidden. -->
+<div id="a11yAssociation" aria-hidden="true">
+  <!--?lit$066521063$-->Related to Chrome Remote Desktop
+</div>
+<div id="card" class="enabled">
+  <div id="main">
+    <div id="icon-wrapper">
+      <img id="icon" aria-describedby="a11yAssociation" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABThJREFUaIHtWV1MHFUYPXd+YAGB2hIhQItJhaTB+qitkEZ9aZr4gE/qi0aiMWB80CI1mtAtjVEeMPhiTA3pAzFqF0vU2EYNWmvSKPGF0JS2htLdECjswhb2Z3ZmZ+71AWaYnZ3ZGXahAcNJJrlz/75z7nfv983eBXaxi13saBC3Dowx0tvb2x6Lxfwcx9Uzxqzttu9e+nmdy/Q+V1xcfKq/v39Ir+PdBBBC2qPR6CCltELTNGiaBlVVjcdaZ353qvcy1uEpl2X5hZaWlttjY2PXAYBzExCNRs+49XnQkGW5Ty8LHvrX6wW/379VnGxh3ULd3d0AAE3T9ut1rh7Y7thxAqxe2XECrPAswKp8u8D1EJvjNaU0o36rQQgBIblTlSGAMUZGRkZe1zTtNIA6u86jo6NZdU5CCqnneR7V1dVobGyEKIrged5RiCEgEAi0q6p6zraXBxKFCjG/p9NpBINBSJKE5uZm+Hw+CIL9ZjHOgKqqnoL8ZpD3ikgkglAoBFVVQSm1nc8sy0hYbW1tBRl2gldBw8PDwGrCgiRJmJ+fR12d7a7eGWFUURQsLy/bthkC9GizVdEl33kJIeA4DoqiQFXVrPZt6wFdsC6A41apWkU8EAGFeJXneXAcB55f//I35yMvX6MFIR/y5jGEEEOEXS4Q7AZtFjZjTqsHrCIK9oD095+QLv+IdCgImkoCunsJwPlKIRxowEMn2lD0VEte8+vkdQ8QQjIWJm8B8Z9/QPybITBJWqsxrTZjAANoMgFl8gaWJm+AlJWi4sVXUXL8+Q3Z0cnrAgr+nKaJBCJdnYidP+dMHtnVNJ7A/cHPEenqBE0mPdvTyetRKKt9Q+QXw1h4+zWkZ0Imhu7k11eNIR2aRrjzFdDo4oYE2K3+hgTQVArh7rfAksls4h7JG3Ml4lh4503QVMqTgFyf1J4z8exnH4EmEvbE9TFZDskmr/dliTiiZ065CnD7PeDJA98Hx3CyctaZeBZHlpO8Xlb+vQnpr6uOdr2EYU9R6JOJi4js82FibzEOL1rczgAiCCh+7jh8rc9CPPAoiMhA5BDE2BUUxX4DmOoghIEJ5yHhmKPtvr4+CIKQcZA1TQvmFGBWPnl/BuHUCkCA00eqcPGnGYM4AJCKSuzp7sFSVRO+mwCmJlbrH6tuwonDjagpfwalcx+D0BUL+bXx6hK4VBDU12DLweH3x3t62XULfTV11ZhooYTHhYPl64vJcah89wNcF5tw8gJweYLg9r3V59I4Qde3HMbDjUjWdK1mtgwypmS0cslxAfXrRkopZFkOKYry0tDQUMAYazfIjPHo3Yy2L57Yg7Y7MYgag+9oK+L1hzDwNYGStqwSgFQa+PRXDgMvH0JR2RGI8WvZQQAAJ91yXMBAIJDzFLt6IJxaMQgxADLP4eyTVQCA4qPHcOUmgaRkk9cRTwF/3CJQy1tsyQMASS+50chfQIqms8z+vr8Ms2U8+Opa3I1kEs/YJGsv02ECja9xsMBAWNqhzR2uAnT/mfMEZQzvtz4CoqngeXvi5h0p8gCBZkseAJjDJvESRl0TWQkv2k40VSEidG8aj9eut9mlBgaguY6BV+4gu2WtzJXkRR5ePFBbss9kkGUY98f+QWsjQ+3D9sQBoGEvw9MHGcTlX0ytyCgzviov8jD/xTQ4ODgnCILTRvWEjRj2cpcky/JsR0eH/X3KGgwPKIryoWfrNkY3mzxWL7ZcL9syjs/AwMAboiieLSoqqs6HgBtyjbNcLc5Fo1F/T0/Pl46xdxe72MX/A/8BZuI/jFHFgyYAAAAASUVORK5CYII=">
+      <!--?lit$066521063$-->
+    </div>
+
+    <!-- This needs to be separate from the source-indicator since it can't
+     be contained inside of a position:relative parent element. -->
+    <!--?lit$066521063$-->
+    <div id="content">
+      <!--Note: We wrap inspect-views in a div so that the outer div
+          doesn't shrink (because it's not display: flex).-->
+      <div>
+        <div id="name-and-version" class="layout-horizontal-center">
+          <div id="name" role="heading" aria-level="3" class="clippable-flex-text">
+            <!--?lit$066521063$-->Chrome Remote Desktop
+          </div>
+          <span id="version" class="cr-secondary-text" hidden="">
+            <!--?lit$066521063$-->2.1
+          </span>
+        </div>
+      </div>
+      <div id="description" class="cr-secondary-text multiline-clippable-text">
+        <!--?lit$066521063$-->Chrome Remote Desktop extension
+      </div>
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+    </div>
+  </div>
+  <div id="button-strip" class="layout-horizontal-center cr-secondary-text">
+    <div class="layout-horizontal-center flex">
+      <cr-button id="detailsButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Details
+      </cr-button>
+      <cr-button id="removeButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Remove
+      </cr-button>
+      <!--?lit$066521063$-->
+    </div>
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <cr-tooltip-icon id="parentDisabledPermissionsToolTip" tooltip-text="Your parent has disabled extension permissions" icon-class="cr20:kite" icon-aria-label="Your parent has disabled extension permissions" hidden=""><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="Your parent has disabled extension permissions" icon="cr20:kite"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 20 20" class="cr-iconset-svg-icon_">
+ <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6327 8.00094L10.3199 2L16 8.00094L10.1848 16.8673C10.0995 16.9873 10.0071 17.1074 9.90047 17.2199C9.42417 17.7225 8.79147 18 8.11611 18C7.44076 18 6.80806 17.7225 6.33175 17.2199C5.85545 16.7173 5.59242 16.0497 5.59242 15.3371C5.59242 14.977 5.46445 14.647 5.22275 14.3919C4.98104 14.1369 4.66825 14.0019 4.32701 14.0019H4V12.6667H4.32701C5.00237 12.6667 5.63507 12.9442 6.11137 13.4468C6.58768 13.9494 6.85071 14.617 6.85071 15.3296C6.85071 15.6896 6.97867 16.0197 7.22038 16.2747C7.46209 16.5298 7.77488 16.6648 8.11611 16.6648C8.45735 16.6648 8.77014 16.5223 9.01185 16.2747C9.02396 16.2601 9.03607 16.246 9.04808 16.2319C9.08541 16.1883 9.12176 16.1458 9.15403 16.0947L9.55213 15.4946L4.6327 8.00094ZM10.3199 13.9371L6.53802 8.17116L10.3199 4.1814L14.0963 8.17103L10.3199 13.9371Z">
+        </path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$-->Your parent has disabled extension permissions</slot>
+</cr-tooltip></template>
+    </cr-tooltip-icon>
+    <cr-tooltip id="enable-toggle-tooltip" for="enableToggle" position="left" aria-hidden="true" animation-delay="0" fit-to-visible-bounds="" style="--paper-tooltip-delay-in: 0ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+      <!--?lit$066521063$-->This extension may run in the background
+    </cr-tooltip>
+    <cr-toggle id="enableToggle" aria-describedby="a11yAssociation enable-toggle-tooltip" aria-label="On, extension enabled" checked="" role="button" tabindex="0" aria-pressed="true" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+    </cr-toggle>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+          </extensions-item><!----><!---->
+          <extensions-item id="dcnidakmkbkbohdaelljpgdhmbbpbdbg"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<!-- Invisible instead of hidden because VoiceOver refuses to read text of
+  element that's hidden when referenced by an aria label.  Unfortunately,
+  this text can be found by Ctrl + F because it isn't hidden. -->
+<div id="a11yAssociation" aria-hidden="true">
+  <!--?lit$066521063$-->Related to Glider Proctoring
+</div>
+<div id="card" class="enabled">
+  <div id="main">
+    <div id="icon-wrapper">
+      <img id="icon" aria-describedby="a11yAssociation" alt="" src="data:image/png;base64,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">
+      <!--?lit$066521063$-->
+    </div>
+
+    <!-- This needs to be separate from the source-indicator since it can't
+     be contained inside of a position:relative parent element. -->
+    <!--?lit$066521063$-->
+    <div id="content">
+      <!--Note: We wrap inspect-views in a div so that the outer div
+          doesn't shrink (because it's not display: flex).-->
+      <div>
+        <div id="name-and-version" class="layout-horizontal-center">
+          <div id="name" role="heading" aria-level="3" class="clippable-flex-text">
+            <!--?lit$066521063$-->Glider Proctoring
+          </div>
+          <span id="version" class="cr-secondary-text" hidden="">
+            <!--?lit$066521063$-->4.0.1
+          </span>
+        </div>
+      </div>
+      <div id="description" class="cr-secondary-text multiline-clippable-text">
+        <!--?lit$066521063$-->This chrome extension allows you to share full screen of your computer privately and securely.
+      </div>
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+    </div>
+  </div>
+  <div id="button-strip" class="layout-horizontal-center cr-secondary-text">
+    <div class="layout-horizontal-center flex">
+      <cr-button id="detailsButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Details
+      </cr-button>
+      <cr-button id="removeButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Remove
+      </cr-button>
+      <!--?lit$066521063$-->
+    </div>
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <cr-tooltip-icon id="parentDisabledPermissionsToolTip" tooltip-text="Your parent has disabled extension permissions" icon-class="cr20:kite" icon-aria-label="Your parent has disabled extension permissions" hidden=""><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="Your parent has disabled extension permissions" icon="cr20:kite"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 20 20" class="cr-iconset-svg-icon_">
+ <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6327 8.00094L10.3199 2L16 8.00094L10.1848 16.8673C10.0995 16.9873 10.0071 17.1074 9.90047 17.2199C9.42417 17.7225 8.79147 18 8.11611 18C7.44076 18 6.80806 17.7225 6.33175 17.2199C5.85545 16.7173 5.59242 16.0497 5.59242 15.3371C5.59242 14.977 5.46445 14.647 5.22275 14.3919C4.98104 14.1369 4.66825 14.0019 4.32701 14.0019H4V12.6667H4.32701C5.00237 12.6667 5.63507 12.9442 6.11137 13.4468C6.58768 13.9494 6.85071 14.617 6.85071 15.3296C6.85071 15.6896 6.97867 16.0197 7.22038 16.2747C7.46209 16.5298 7.77488 16.6648 8.11611 16.6648C8.45735 16.6648 8.77014 16.5223 9.01185 16.2747C9.02396 16.2601 9.03607 16.246 9.04808 16.2319C9.08541 16.1883 9.12176 16.1458 9.15403 16.0947L9.55213 15.4946L4.6327 8.00094ZM10.3199 13.9371L6.53802 8.17116L10.3199 4.1814L14.0963 8.17103L10.3199 13.9371Z">
+        </path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$-->Your parent has disabled extension permissions</slot>
+</cr-tooltip></template>
+    </cr-tooltip-icon>
+    <cr-tooltip id="enable-toggle-tooltip" for="enableToggle" position="left" aria-hidden="true" animation-delay="0" fit-to-visible-bounds="" style="--paper-tooltip-delay-in: 0ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+      <!--?lit$066521063$-->This extension may read and change site information or run in the background
+    </cr-tooltip>
+    <cr-toggle id="enableToggle" aria-describedby="a11yAssociation enable-toggle-tooltip" aria-label="On, extension enabled" checked="" role="button" tabindex="0" aria-pressed="true" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+    </cr-toggle>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+          </extensions-item><!----><!---->
+          <extensions-item id="ghbmnnjooekpmoecnnnilnnbdlolhkhi"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<!-- Invisible instead of hidden because VoiceOver refuses to read text of
+  element that's hidden when referenced by an aria label.  Unfortunately,
+  this text can be found by Ctrl + F because it isn't hidden. -->
+<div id="a11yAssociation" aria-hidden="true">
+  <!--?lit$066521063$-->Related to Google Docs Offline
+</div>
+<div id="card" class="enabled">
+  <div id="main">
+    <div id="icon-wrapper">
+      <img id="icon" aria-describedby="a11yAssociation" alt="" src="data:image/png;base64,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">
+      <!--?lit$066521063$-->
+    </div>
+
+    <!-- This needs to be separate from the source-indicator since it can't
+     be contained inside of a position:relative parent element. -->
+    <!--?lit$066521063$-->
+    <div id="content">
+      <!--Note: We wrap inspect-views in a div so that the outer div
+          doesn't shrink (because it's not display: flex).-->
+      <div>
+        <div id="name-and-version" class="layout-horizontal-center">
+          <div id="name" role="heading" aria-level="3" class="clippable-flex-text">
+            <!--?lit$066521063$-->Google Docs Offline
+          </div>
+          <span id="version" class="cr-secondary-text" hidden="">
+            <!--?lit$066521063$-->1.89.1
+          </span>
+        </div>
+      </div>
+      <div id="description" class="cr-secondary-text multiline-clippable-text">
+        <!--?lit$066521063$-->Edit, create, and view your documents, spreadsheets, and presentations — all without internet access.
+      </div>
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+    </div>
+  </div>
+  <div id="button-strip" class="layout-horizontal-center cr-secondary-text">
+    <div class="layout-horizontal-center flex">
+      <cr-button id="detailsButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Details
+      </cr-button>
+      <cr-button id="removeButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Remove
+      </cr-button>
+      <!--?lit$066521063$-->
+    </div>
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <cr-tooltip-icon id="parentDisabledPermissionsToolTip" tooltip-text="Your parent has disabled extension permissions" icon-class="cr20:kite" icon-aria-label="Your parent has disabled extension permissions" hidden=""><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="Your parent has disabled extension permissions" icon="cr20:kite"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 20 20" class="cr-iconset-svg-icon_">
+ <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6327 8.00094L10.3199 2L16 8.00094L10.1848 16.8673C10.0995 16.9873 10.0071 17.1074 9.90047 17.2199C9.42417 17.7225 8.79147 18 8.11611 18C7.44076 18 6.80806 17.7225 6.33175 17.2199C5.85545 16.7173 5.59242 16.0497 5.59242 15.3371C5.59242 14.977 5.46445 14.647 5.22275 14.3919C4.98104 14.1369 4.66825 14.0019 4.32701 14.0019H4V12.6667H4.32701C5.00237 12.6667 5.63507 12.9442 6.11137 13.4468C6.58768 13.9494 6.85071 14.617 6.85071 15.3296C6.85071 15.6896 6.97867 16.0197 7.22038 16.2747C7.46209 16.5298 7.77488 16.6648 8.11611 16.6648C8.45735 16.6648 8.77014 16.5223 9.01185 16.2747C9.02396 16.2601 9.03607 16.246 9.04808 16.2319C9.08541 16.1883 9.12176 16.1458 9.15403 16.0947L9.55213 15.4946L4.6327 8.00094ZM10.3199 13.9371L6.53802 8.17116L10.3199 4.1814L14.0963 8.17103L10.3199 13.9371Z">
+        </path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$-->Your parent has disabled extension permissions</slot>
+</cr-tooltip></template>
+    </cr-tooltip-icon>
+    <cr-tooltip id="enable-toggle-tooltip" for="enableToggle" position="left" aria-hidden="true" animation-delay="0" fit-to-visible-bounds="" style="--paper-tooltip-delay-in: 0ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+      <!--?lit$066521063$-->This extension may read and change site information or run in the background
+    </cr-tooltip>
+    <cr-toggle id="enableToggle" aria-describedby="a11yAssociation enable-toggle-tooltip" aria-label="On, extension enabled" checked="" role="button" tabindex="0" aria-pressed="true" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+    </cr-toggle>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+          </extensions-item><!----><!---->
+          <extensions-item id="deojfdehldjjfmcjcfaojgaibalafifc"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<!-- Invisible instead of hidden because VoiceOver refuses to read text of
+  element that's hidden when referenced by an aria label.  Unfortunately,
+  this text can be found by Ctrl + F because it isn't hidden. -->
+<div id="a11yAssociation" aria-hidden="true">
+  <!--?lit$066521063$-->Related to NeoExamShield
+</div>
+<div id="card" class="enabled">
+  <div id="main">
+    <div id="icon-wrapper">
+      <img id="icon" aria-describedby="a11yAssociation" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAAAXNSR0IArs4c6QAAIABJREFUeJzVfWnQpddR3tP9vvfeb5nlmxnNSKPNMxpZsiSPZRtZsi0v8iIH7OCQwhAgNgGXDRVIVUKFsBZFlkoqgTJbSAKUHQeSAmwIizEYYxyIZRu8SLZkS5YlWbYka2ak2Zdvucvpzo9ezrkzMlAEjaRXI+nO3e/p091PP92nm7Ze+BolJmICg5lAAAEMIiImEMhvA6QA20MgJSYiewIRAeSvZYIyCAATgYgABoiIiKBKxP5kVRAxEdRey3aLACgRKQACYDftsxQgqAIAEVRBBLtLYZcqQCBVuwEFVFXJ/qcKfxdVKMT/VShBVcWfaR+hQoBC7C9QUVWFkr+PqgqgBBUVqEJVoYD4M1Wh0r4zoNAiKvYJBFFor9QRmHxZGUSkrLZcxLbu9oeIGaQuEmYQbN2JAJdBvSdkBhATadwFAsHEQ0y+6EwMW1MmEBSINwfsTQlEpEpMcLHAnmaL7OKyRY5XIcRgMlOTucI2EpEKWElJySSoRAwo+VMUxAohYWKBvV6VVBXiu4NIxWRACgEBKvGVlfweVSiBALGN4N+CxL5vb+ulROzrxSAmEBGDUhVcANRqBgjMpAgFcgEQke9ok4H6nbagKbaQEOL9bR3jdQrb9fAdnk8nUigBAANqW55dVIAiBAGGqpo6QW1pbPPbcxQgW1XY3oSkqFwOtlzszwwxi6aCAcSkKkSmCZpfglytCBBSVd8fwspK9hsgCiLtCb49NZaYmBRsm9o+HyCiLlZ/ThJhHDiWOA2XmSnfvUysoVYmHqrag0ZsiPezF9ftRKkQlMvt0jGxmPGwf8mUwX52LqQq1IRpq6NmZEwCTJ1CYHerkCqRqu1hKJGSmREiVgYEpKSkUBCpKBEBolBSNjELgVxoYuI3DfOPti+u0rf73VfWFpEISmC3S3XPEqGRGXPu9/mnma1XYmYowa29GSA3QSknk0gH5Du72fN/4x+kfHKjVWH4WrnMNKSCUBjbohrWCykpkJkdJbCCgNAVVV99SLyz+u52y6eQQmAiFRUiYvRKhVRVhZlVxb8ISKkjiEIAIrjbU6Le19p2HUiZGGxfhZhzxW2Pq5v+6pbDTLgn8M3uy83EITP/x4wI+0auSuDb2B1Dbu64Hf9zbxzmyfauuQel2L1kvtd8iVt9M/HVo6oKg6vSuKSUzXgRzGRDlVJdxD5fATEBkgqoM8dr+5WgrebZ330PQVTD6obfJ6AnNhdqNsc0wJywCYYBYoc6gXaIMXd7TksAdyfxkFv/fHneWZc+TFt4eyA8im0VdT0wzwpiNK62EZEqsSMY/yvcgJtZMP2CqhAbCEOYGbfUKnDPYY+pOyOosrtNDZG7fRTzCgJiVQF1pALfDSAIqCMyfMXxxVxgAupj9X3Fqa4+J/jR9Mm+68NSmfBsy6Qp87ULr5AeIjc7naU3gYjqRg9/YKKPZyuBNZy9ojU/tsQNPlXY9jctIXWvYL/fbI7/15bDHlIQx7o7xAx3LQSGCmJ3OybXYlZBzHYxkXl7AK4fYDheVgipKNgNIogUPSPW1JC+2xZ2OERze5yoC5Ptr4LSnDbAXW6DHjlfEj6VaN74VNiqyNU38SrAZOsHUpN1BAckVb/Nwcb2txeClNSBjZkRspeQsoUHEA8r1C07oMrKhvMhWt0DCcT0i9yGqJLEpnYBm7EVkcDlAu1URc0fgxRMZPCHQaKgXgkAMzGINK2H2yW4aYodnWEaVbQawov1jXuaGK0aolYerR6g+vzAnukl0gO7D4BjDwYrOZppjJlb2IinHGiabNTcqQIkhkKhji6VhBKh+m0ilbBCygY+SUwhAHFPCVEVB4Qqbi0AVYGFOf7NbeEFDizF9q6jIMBhYqxRV7d5WnNlZTdTxImXCNTB4NJZQUNd+jkTRI1d0sZB+6ZxjYRHxa0INFCr36OUgZSt3VyoFWGQRVWuECY8jScqSFTVwkGo+DPM5/o7CkVcSxBCF1DK8JI2RjB8DVXvZO9jfoOZVBhQIlVl04g5HwCqtih8sse9sUDpHjiRq6bVJnbyoVIaRBzIx98NplIpnkY5DOCQB8aEuN8X0/Um3HJFqYE0zaNSuspQAot0MwKAWxVVEih7zKUC6iwcMwOnJo/gM4jEA2GzSxaxUTFgqWoC68KzK8HejRRMfsO8cTGzarRKnwDG9rItnMdMCI6BCOgCqNTVB3VmrUJsMDapec8KhCK+okQ4bVyWutIxmT91U+Z8j61Caov6RmOQhDqY3aHEphkYu6GKLa/GChG5XYGRM7Zu7m8BMDqGFoj5W4nQ27xIRm1sMDagmhCxqFkn9eCBIuyGgMDEIuK7g7gnMu4s9YAqNzevCkSsYfdbJOrOmarXzYA5DU666PZ+W/2Iyip9lBSeOaGAe7G5yeNDd7Xs4JDdQ/h6N9GWcwNEsH1qK6V11TpHQQb8wapF/aNMcUo6WwWYICJECKkAJFAnK1Ul9lnxPVJZK1WjOQiixQLjPreeWXBQF1uVAWYHmm2o7LeZWM8y902sENYs33zO9Fdf7SYmxKpJ5CXG9NAsY680slyxeFqkRgThFZq/KhGrKiCB5DWsVJCmJG7g1Ai4zj4lQjxhUxEjwaq6GO9UzLLDUKyyB2L2iSBCB0IEwxYna9/ATaOAiNDu0AyGa0RWgwP3xnNKYPDU0VQNm3PpQQm01LxGA0m5Mfrq0UGwXhlzxU43kGGw0p8WBIMRCc6aqUFx9TdVZxnc24pZdIKCfaUDLKuqqASjB4PwTm1GQKtKDAFISM3Eg8iICYKzRoykuGGa6/G+QvsMl7Th1ObsTIbBCOs05xIIxMycRga2qOfQFdUzE5u5AAcq5cYVJ+sTNF4mCeZoCVsgOG/gSCYhicMSbeggi0ot+CIXjEe5EgGFPVdAzh4TASzQDs63ie1uUlJiUlFyAAU1wEMAiRDYgnUByNlVdDAVAZQEYvaKe0WQNcn2BM6pEYBvXg4jE5GzGahc/QjcatyQAkiKlAjEbvopKWauiCdoviY4mMvLJE9kMVGg0YiBg5GmNEPusVWd6jGwJCCQZ04sSJB4C4P/qIbNXXTueguyhUzvRGBBQOCEjknDdwMgcxVqEYCTlMaFEEtv5A8St2j4A9eGuuJn3+aQSjwzObvAqQ0QqgJI8eAJ4oPKCpkMnDu1XWsGgAIiaf5i9eeqs82eBqMk6QmqAlIVMDumJ+cTLDyOUFmD4qAkT91AWRwCFVMD00wGCYPUbI290ne9u26CqHMogDJ3IsXQG4EBuAlSo7mT/nSAX7VBw5b7msYzqapFon7SCK1jxRkAcRdYJtx4S6YyNYufZDSFj46g0o2VJk2qNWPgJiW5YjfflkA0wNmZb1BVseVkCIhVBOjcvMA5fvL4TUECFfVvoCBW50GKBeQCIfdHHIjAkKiQMpMKhIghChJiN0rm+/sIeCLaBwGWpGwiYTc1XZKavmq592sEByKm1nN49NSQ3hlkhAtJdxKOJ/yAG3yuwYNzYG6xwgq5mQ2zE644WS9WaBeQVNKw2DoajCendChkwJqLaME5PGMMEkDFFt7zaFAIoxMURzjBiQjECD7zZKL+w9XkCmpgKAU30LrhgECxLuFaDa1SF+hzzshkwqDyQnModp4lJUPiudCcpANV/q6yz0yq4ORLw117KsbSX+ZgnRalzBaaMTGX6HSNMqkKG/vgkRpBwygl5jH6x4EQSIXBYLAazW84R1hZASExGtB+tmVHARHTD4JqAYiog2rfcjWZEtBYsLqOHt9y2h8KzUhrE2CJ21cl28pErdFvw7EmFHBvzB6fVQtUl1uriSIOticjzyR/G0oOqDEwPHWuaguLDCXEDLxnuTOOMxwlEkg4OJ8UBqmRcWZ3tMKG3BTFM1E1i2fRfpJx1TJwYJvG/kTNBBIdqWFHc7+pExX2EKoAgitNfAWatzxUgWk1TVTtYWBQu1P9bnW/jEypQInZSJ9ghoLNR+pBvND3OLOZHxE1IZIkDRdxg91gNG7AkRDMkVCHCICJFBZhuZXOioHijIspj2qkg6i3FFNs8ND0uqaeJOC0HpU2MFtG1ARr1BCigVDbOLn6WA/N5tMD1LoEz7pkfGDuwI03dU6seTGFgfYggmL7qxGhGrEuqUVMJLDwzap5hNgiAw+aoBIFEQL1Oho1XG9BuLIjX/alb0gIRNhte7FYJlIdCmcuiU1T+xaeR01KwJ5cmqAWFMRGwHEbE3CUXtkTHJ4mDZdUhBEbc872iQiiWO4oVpoD/57vrTFBBmYBJN2XJgNqZCjVkiElJQlIgwSe7QYnslIGcgJOlC10h6cbMylGlt0hJz3Z1UWsKsvUykpaSKSRBDw/07tBb0yz+l51SVBa9pb2Qcv+OzWE1hmAiLt8CYWHZ6KzdcIj4SYkznDgLBPke9t0Udz5ao3LrMQKjj4ROfSQC0ShjE4hyknxG2VjHrKynlF0Z8CUyUlQMv8PW2LTChaKCM/cbxhwVxlSjionjuQkQ1WVGdq7N2BO3I4wx255Ag7lrm8TLwr2VAyfU87VeOP8r+/6hu0wDgjM0NwFjNYCOaqr9g8A0FVDn8lkKMDaWxwaFYtG7btvNIUwMqeWn5i590y7uBjUPLNyhB3iaTFy/EvK7NlIgbJAmThkrsYWMlndlvPq4lyQx/XmA5DGV8kiYWLLogRFoc7KNLvbk8PNXkZ6YM8eG9XD4cCTE6pemskAqL+VY/nGT3jgHjpQgxVELjewQhSKRAVhVBuy0xHsezmIuArt4fAaDmaI1Te3VUGYv0jaWQzlMpN4/sESz+7SLP3L5OVdJh9PsURA7T6dwKroM46N9GzWhrBHyO5dzcgl/gmOCGnB2sCYYCJKbJPYvzLYFQWFioRoIlEcziO1wVFA1Fhm4g9x2+2900ZRjRsw1HGQIPhhgoiGNRe3LJZvdiTDQkbEOej0yoDgl1WSAnKXTe6OiJSJRJWDLGGnUNBZHGBK2weyJbCh7zkZNFGZoyCviWuqTs7VA9vcq7OlxX7aVRajNUcMK7ROltQ3eaYQAnElKtUKRNm5Rk15IJiaINHIjQ9VJxxlEJ4TcIxo5Z6uVbZeVlfLnkBRCLlsEKUMBGY4beoFP6YJJiRjXS2v6ctlVYr2ouJhGlipNNEQHHE2+d6mHKhSNdyu45yJ99UHAWtl6XWXfmpltDbRUWehG1nU5jlMYg/ouH03TldhbrxhWBMaRDqBuctXBfSyOzoiZue6uY1R5jjBZGqZA3R0BGZmoq51ePZ4+yZBooS/JS8aJw+b0hcmoG6yqh6KuSPsNl/wYqKu+f1hVTzOIqbO4Lx/s1x3dkKio06ZyRaZmUCnplu+48o//Q8v+ekrNx36s0MvnelwpkOgH3QyliWhfsBCTmY0QVxYNq5MnzkeZheYw2VO5UuzWZNr3JiwpGQTxla6O+OdoK8j6WwA0fnY4L3Tz2ey3z+iSUFkcbTz4lq9U81UZB7U82zd5gtenHsQxEwdfEN1tu0Cic4LiTqO215H7a/CVEffvu9DP/HCXyll4VkrD1675eEPHXjFDRfc/ePP/4XvvOL3rlm570tnnn1ytjLsROcAUqNiSNoi/ETUC6UlzAvhzStRmLU41XdHUB/xKKK8JanISja1N6k+MVb43Ls0WIdaf+dr7/fWet6URGQulC5+zr+A63LH3FuWkakzxp+5AzoCUdfu/UYYqPCUmcay8JytD//mq3+USEQGALrB6uePXH/Z8sGtSwcxW8Rg7YtHXvB9t79DMPA9yXVNHbxmIthB6nweLL1e/X9ustiEEtVBVo0VKd8o8FFAxI+xSPOQRJGuxENiaUn4s4tqiScXFVGd+yNSVAUqIqJaUB+axZOLSlEVRYGIauk273xJrmlNuTCZDDwvzx2Mg0PHbJuz44jgXB4gIh6yPr5xARG9aNedKj0TVIYXLh9Y4JmUJVHSsrBz8fBdJ/Y/eOZZC90kzUP4EEW6dnvMQ3oEAvHnBL7T5B7IqTCDNMpxSiKJIMSfvE1e66kI/sfYN0+jk5VQeJGoagEBNITx1aq5LyJDFDnOONOUNFWlJ8LyWHWeAn1D63D1x5kLaaiI4BW69C2Z1eJUZgKI//Crt3zHFe/fPFxTYSKVskBQpuLV90Trj/3xxqN39sOZeNyI5gqL3dZetQ+3j8zZ4PkrzgqgWm3LQ7PVU4hIao3poSpESmqSl0CZjli8qgWjPWXxBq1FeuT5d89HeK2vh3vMKhLhOjntRrU+j5p8QIZnQa5pBAEWoFWCM2kCilM02CgLC/3MPEIP8PQAZCNoH6d8VUkU3UDu+OrKZ746HZaHpuWsEucn/SLi9fF4Y2PMzMvLi8yGzXljPB5vjLnjpaUl9oQDNhRjRQcsBTUOVZoeVFooC9dDNwjGepASqcDJ/zhfZuycHW2zmNLjJAvznMkNNjQRa4O9azVK7PYs30nagggYy+iFFzxwz8kr1maLo76cnG55y7M+u2V5vUyXmeoGVQWxnNoY/Mfbrjw9WdgymhUlOo8CIKL19fVrrr3u1a992dEjx//o/R9aW1sfDoera2v79+9/xS0vffyxwx/4ww+Px5NB360rrhvqLQvyaKEPrtEM6AhCDAFND9Di85SChnCSQ1TJ61ayDsXAlJW8UxSOxi4XKEG7rTtvDgbTXSvP43FDRIkOEyMzccd8arb5O6788E+/9B3bB2uHNnZtHqz/4yv+6O3Xvt8PWlYe2WUwHMiFy5OPPbx9POs6FtW5JzyZy4/xxvjKq/b+7M//25tffuMrXnHTtu0rH7vtE5PJ9Kqr9r7j5/7tzS970Stf9ZKtWzZ9/KOfmBLvH+g7ts9ePNJXLZZFwsfH1Lm1E+pXdHRV5uDisNQcII1zYOp1YPacPK1THRI48GyEFsxKpCBNxrcBiBWsgJiwVhbefOWHfuLr3tkpf+u+D7znlh967y0/+P3PffcCb9gJSmpwmWcgC91y9eM/deu9i30pwklYPtkXM6+vr7/q1S+76KKdRw8fP3bs5MtfcdO+K/eeOHHy1tfdcsHOHUePHj9x/OTLX/mSyy7dfXo8+fplbO/0mNBJoVsXZXenEysN98QDO31X01mVs6pBvuNmbk/4aHWgkYZVT0ZbKXBlbRrHmzlyRz7MWCtLr73k9p+88b8WGaj0IqOeZ8NuIrNF1c6+aTIDoihiIT9NVoc3X3XoJ2+5byZBTp2HS7Xj7sTxEx3zcDRY3rR05szayZOnhsPB4ceP9F03HA6WlpfW19fX1zd65odn2gFD0mXWU0LrSn7exox6GODIZ4ZDDjSXFGeyDBRnNPKPlWF2W3a9nLjjBKAemHdeaujhVZuBMfPDHeF02XTFpsf3bPuylCE7YWL6EtXNpKrELDws3Cn3IjMe9HJqbfTLn37WI6cWO+NOnnxPoIrBoH/g/i8vb1res+eyI4eP/sov/dpnbr9r0+ZNDzzw5ZVtWy+97OLDjx/5L7/w3z//uXuXRqMHptjZ4ZIeB2b0c6e6B6Y0IqvgmmGwHQtXR3bXd2+ALK3oLO/SWiCMphDVofWlz/0Rpg7csRv3DmDueksoMndE+RAT9ektuo7GsrDUz37mxT9788WfLNMlJkkl1CiH5KGeXFv4rbt3P746uuHiE6+7+rGNcf8DH7jutoe3ryxM9byiIJrNZgAuu/zi06dWjxw5urCwAGA2K8x0ySUXnT69evjw0cXFBUCLgoGLe5wUHCtYYIhoEWWd6sI+XflG1akamPWIrKiIQqRYLFZEikJURaWoFIGozFTEAjGgiBSo0KXX/Qhz78EUd+6K/UbHzMQdqGMi5r6NfkHdoMNURx3RO1/2b56383MyW4gdDQAiSh0eP1He9r+vvv3QyrCTWaHvesFXD5wa/cmDO7ctTMt5sz8pASIA4/Gk67rBoBeRLGoZT+bvBBSYKPWEHiqghYXhcDjSMsbildj2RpGpqkJE1GRQPOiVYiExVNQ6Q2ixwNjDYLH7C7SolN4tUqa/Kc6TJpcSnFTlqqiyfUX7F+z4wsWbDkH6djnViIRyZv3yt/yjf/mWt9IpJYbS6rS7lvTv9yL61wRST6IQjERuS3mf8M4a9NF4PP7AH3347rvvHw097UDEgEh1ko7m86Bje0TcY1shTQchpMog6SPN7cECkZ0E5aYuPI9ppFtmBTprs0H47qt+f+emR8t4halo3dRK1Om4XH7tTW9+3qvrWYZn7PUNb3jN97ztX33p/vsWFtlPEvuZTgS/T9rUcITHJq1Vd0RC8bpMSUbCy6lZredaMxyjyP+Gh/UaNlFe7ic7RifLbMGz4EpMRZSZSKDELI98eO3qt2E6bji1Z95VZmX79pXrr7/23nvuXvTdSXkkyiPU3P5WLgSyc48aOQCXkNdv2BPQA54ksNQ9M0G5lspG3sjSk4izrJbi6Ts5Md1y57HnXLPrrlJGUHC3MZ5uGg3WZdYTFR1t6R/87dEd109v+HGarnvVzTPx6j0PansaBJJISNiJqeLBWKyy72ipVDQ5fWcWSV08TNVIoeEYEKdnKQvBHflG/leJFLzYTd51/5tue+RVTEI8/uzRF7z9kz9724EX8mi1YEDTdV3YJTtfSFpq9uSZdqUU6uGZs+IkT94RsreUcuLMlktv8o/wTewVfkrgKIPywkmqp4jMFsWdyc0paMDl+GTrD376x67a+vCAy4Ore1flgh//yMv//U1fevkVh0u3Y3bre+TyV2J9VewgfO2pFD7ekuiZ402Frnmop/iaoyABMr7TdrFvz6h4sIOdxTkgW9sg46wIwPIPUcpN6CPO9bo+pShQtjdgz+5QYqR6YEgJLEpDLsR678l9oH7UTbYM104X+uEPPvs/vXHHzW/9+dnuV/L6mW4w6roOXo7kN0QViq7jUsRSasYGixSRp8vqn3sZl6BkSKZJS5pdyrPFuVr+GIlQFGxE/EymAZEnzSZvURzXKJqqH5dvkodpugAs9BOmGYhm2i/0OLo6+43Hv/nFl7ya1le5Hx47dvzI4WPLm5aZ6PiJE33Xj0bD5eUlEJ04cXJlZctsVlZX17Zs3iwiW7ZuXlgYPn1lYO2bIifgeNqrH4yRII0iMG+V4IjG0wpxekRVqHeBRHOnWhZu9Vhe3evl1ElY+4kaqJF3RCxqWQSv2utYBzzT2UQUS6PhHbd/7rHHDnddt2XLpo3x+MEHHtp7xeWPfvWgE0tEi0uLm5aXDhx87PTJ02/7njcvX7K7lPHTUwBxcgZE8E2iWW4emeBsdAMSysJGa2QTe1oIRL0nV6Pi0rF/dPwKJx2Zl8rmecEZO/uNOFfqAZ1qtZullL17L9++YwXA4sLC4tLipZdcvLS8uO/KPSeOnxoOB0Wk77uNjfH+66858Ohji0sLIuXpufqWWXKrISBvVBMn2uJchlfxeVEq28HVcAa1fBiqvUZhQJTFhaqYkbEHo+TeQz4DRWxWyIooM2rO2lrXG2Yejyf7rtwznU4HgwEAEdmz57LpdLawMAJ0PJ4MR0MVmc3KYDDYv/+a8WRSSomOD0/9de5WyLIq0jigBsoaO0EcLfAzl15lB5BKRg9WJ0l9k+xSjdPdtc5jLsbwc/eZIMtgnSif3GZtkSCnlNJ1nS0rgFJK1/F4PDZCfDKe2I6ZTCZP+IOf2mt+H3gsJZHojbaLXv2muV/tWHFsTqnlAWTGxd60h5ud7J8ZldVRamnFgKliSTlHiUygKHLGm/DEmV5VtZrfvLqu8xtP6vr9f19Gz8VF2fMjVz0wZBZGRPcOsr6MFK7Yo19/H68N9aMl0fWFKAsF7EBnQqooFqfI37B6K9UIr7OYtv2+DaJfX18vZfZ02+Bf67KVGgwGw+GwUYI4T2TsjDdeocj6kTeP8Cxw24OREgLZ+1QqIvqb+tHBMAIU2D8zYpH9JM2YD95fE3aS16s35jlOk8GJEyfW1taeKatvlyqYaWVlxTIHdsXhb68qciNvz/cKJIousIi+oVEMSdm11DnovhbiZAkQ0qGG2lhkgLr/bf05OUH/Ym7GSM9WgvF4vLa25lWuz6hLRE6dOmXwwS4j11RTFB4ZGMqMo65uMURMAlm5HQSP94pAdLmBRnNry2TFUbda4KVx0Lk5DY2sUPPIvAaAzWVO2GHV0wPY/A0v9TOU0roBD4RyV8OhqUb5VdQZaAQNsUFdem5uzLpz607zCFzyR15QFNXAmjV9vs7uzbMrSa1gPedntDeeKVc6sCf42h7u+BkpTbI9Siy9NFWjmBWhPFEgZ+vMzWrF5q4dsD2nkz4/kz8eiUU/zqgOeOLFrZj1GbX6dn2N70wadoK8r1aY7TgDENUS0e/J+1fUKmoj6jiBjmZlCnl3x6yhjlM/0VCn2ihXlKY3GxKKPQ2v2sf4a1x/w+jPaxrUu4o35e3kFQ9RfRWnlOcMVLuGQRF7hYUGFx1NSPJ9wyVHhwxEbXKUOVaMROeaoLNunP+rwYteKBZtdilApLbPOffLt5cXUwV4Ry3n9WSjgpp7IucVPjtInUhJqnov0bqMlSAK6apSVlp5TjTeTFSNEoomYed83ejm+RSx/LmsIsLMw2Fv905LmU6mXdcNhwMLEqeTaRFJj5XfeU4kiLEYzZkYjQkNGtqRhECeh9EwTEFSQEl76+QXAyYQ5fP+ttH6TjOaQza78XbY0RPPxaVNzX79/V3XRQeTp8AN5A5YGA03xpMHv3LgKw8devTg0dXV9VmZqcjC4nD3rm3PuvyifVdctml5aWNjnBtFRLqua2J4IiWJxgN1YEdkLANH+hb2Rop1SSvc9L6h7nrNlXCMFsji+ogtojE7Zzva6LesiZ5MgSseiEtVR6PR0tLSUxWIiWjXcd93d9394F9+6p4Dh47NZiVP9qmqHDvzlYceu+0vPrdzx+aX3rT/xhv2AzqdzuzYz5YtW5iTLlHnxbK9jTEOiKI360Kk4jWxFO1MqfUI3jZKQL1SchkgJeWaswHCrfgyZ/M1C8HrR51RAAAb/0lEQVRcRayaNzIQepbCpgXYtm3b4uLS+eeZRWQ4HKytbbz3dz78mbseYKbhcMBMs+msTIt9N2YejUbLm5ZPnt547+/+n8/f86V/8uZvuuiiizY2Nkaj0XA4tJI6WxBE5w+KiQTZdEJ9eIAG/Ccb6EOJLbNuh+zoBnqn7lSDW1aFWoeJSFKqt0nyGTfWcEKjdXW0gdTMVZ69wMlyLy0tns+lB1CKjEaDo8dOvvPX3n//A48sLy+W2WxjfWPLytZLr7l0x66do9FoMpkceezwoUcPHjt8dDAYXHjh7i988ZFf/G+//oM/8NaLd+9aX98426tFLydtlr7+WD+SRpFyBXkzSyVrEB4jlohURHszPjHrwTvDUph4VCdiDRfrscBkBd0faLZnOFsDnqpLVfu+W1vb+JV3/94X73toy5ZN62try5s3v+Lvvera5z93y8pm7sAMEZSC9dXx/Xff+9EP33bi6NELL7rwqwcP/dTPvOvHfuh7d2zbOplO596WEkzWpddmNaIFQuub/TQUJcKBE0i9d200xlmsvRYBbR2bh7l24uYsosdZCm8mZQ0Coef4AGYWkfX1dRE5PybItsFw2P/OH3zkvvsfttW/bO+e13/LG3ZfcsF4jNlMdZowm0YLo6+7+fp91+z7g99835fuvX/Xrgu/8vAj7/rV3/7n3/dm5q79zt78RjSNvjWAlWjAUs9rpsMl14zo1RsdXBS9x2CkxpXmXInIAjvJHe2+1ac6xcgJG9ERrXVMPDpPBTkIOX78+Pr6+nlYertEdGE0uOcLBz/2l3ctLy9urK/vvvzSb33rty0tj86cKV3HmI9yVXVtVZY3b3rTd33Lb/+P9z5434O7du361Kc//8EP3Xbra26ms0rKMpqiNP1B0kCy26XZIapo0j/JGxyoj8zKQ3Tumu2m+BCbdB7aOtkQu8YAOdexTO6035aINjY21tfXu/N1MXPfdyD61B33iaiILCwufsM3f+Pi8mhjvXTd3GnDvN113XQig+HgDd/yxq0rWwk8Go0+8vHPHDl6rC57kpWOBPOkccYDGkAx26opKhCNxllRTcJhnRQxeU5bEdcltilaGmefEC5I4yRUvLoGKFUAMh/dPNmXqvZd9/iRE1955NBwOBiPx193842XPmvXeKNwx+fGgxltMdN4o2zfufmGl904nc6Wljc9+ujjDz10oONKmgXEV03uoHJDERLNnciI9CJqvjY5Ea5RuZM+KWuNuSfBPDQfkZg2BJGnyzXO1VYpnGc21L5EP+gOHDi6tjYmYGlp6er915aiSYmf+zVSG5hpMtHn7L9uy7atTFxKeeBLD/eDri5hNGpMVj5HjjVH8XJWRDU/6TEAZG9qTh7HMCzFtq4DKS3dX3d3M5XCPI4/IPWrzB+vPs9saJD4+viR4wqdTWcrO7bt2Ll9Nv3ruRBbPCnYsrLpoot3iyiIHjt8bDaTFEDQEL7bwkSEU1ZvVJTsUlruoJy8LNBoftaYoxKzinyiREAfafMzmoPNWolkKifeO+azPDVXFiOdPrPOzKKyddvKaKGz7hB/9Saw10qR0QJtWdkiIn3fr61tTCfTuqVSArHdKTdlOFHrTxeBcNgi15zayS5ooLaXhZsZDyYiz5OyDcCLEA8aaVea9Syoev7ZUAUwmc7s5mAw+Jtbv0ig6GA4NIkYwJx781y0uV/VbvJ8akMZUTiGSlD7cKaWeEshSry1BHmdVt5eIWi5b7f+TT6n+Ukts/h3tcZ/xWVZrIXRwOLytdW1rAf5a7+AbTQRWl9bM9fWdTYgoSEprfgqHGnD+Te3fUWlLmxDonoPG1VWryQKnZDIwPhmloC5jYbUmxJFzs2/ns2pPiDZ0PPIRWvXddu2bipFuOtOnzy1tjrpugo6v+bLLEnCvLEux48e77puOpuurGxZWFyYSz+pShh98snOklmFaD0tCdaRifR6csx3aq+a/e3TEEn05M8cm0Z7Tk0lUghi/I3GJDolsTTbWSZoNBotLy+vrq6eHwGIqKrs2rnSd9z3/bHDRx59+NFnX7tnvB6t977G1zDEPBjQoQNHHjtwyJo+XPXsPX3XwlDrfh8TuNPApgXOJrFOiCpEKJ5N4VfNVfSZIvJxLEa0eagmMUjKNq8E6hX4QE1xT0FhlBQx+rtetvFXVlaWlpasPOLJFoCqdh3vv+6qD/3ZHafPrJVS7vzkHfuu3hsVBHyuLlZHJdoN+I6Pf3pjfV21LC0uPO+5V0+ms9FoGDDUX4C65X16uS9UY3Nq+jHrRhMqQqHojQH1UUE2lUVVrdGPKqjE3DSJdscRMUdrlhg+ndyUnlWbmD91NBo92Uufq6mKSy7ect01V/z5bbdv2rR87+fuuefOa5/3omtWT8/MFp3lluxGKWVpuX/w3ofv+eznRqPhoYMHXnLT9ZdefOH6xnhkJ1TdkCfDVs3y2UgkPWZMQodq1IgmKNIcHtpkq/1WDazyJiLbFQhX1Jok25/w70/YguNvdTzrb3kxMzMVkde95sUrK1tms1nXdR963x8//KWDmzb3Rk6kqOyGiKjo0qb+8KGjf/hb75vNZhsb65s3L33j618VU0UrGG9puCYQCwieoSilbBrslJsYCDaUwnkG8emq4IUtxm+4BgiUnXGzcaKRDIPmiAKd14FkQ9fW1s6PCbIPFdHNmxZe88oX/s4ffGR5aWHt9Opvvfs3X/2G1+6/YT8zZtOw2EQABkNiwr133v/B3/3A6VOnuo5Pnjhx4w3XPXvfZePxhKNgyl1AmpUmIkMaHl+CmMOdgSwkWkhUX90nZVHrWsj7iKsqc04Cp2gm63BTvBxDIsesEQFGEVnogHk2Y0PPZzpMVc+cOf2C5+179ODhv/jE3Zs3L22srb3vN3733rvu2f+i51++d89wNGQmEZ1OJg898NW7br/rC3feTUR93585fWIw6D728U9cevH2f/hNb0C3CB+k5MFRlO5UXlJUlMRBYCMb2wyeoIneQVkx1NNcT7uE8RnXGscsyW3ESExLD9gUcKuTkCjyjeqkuJh5bW3N2NDztvopg1Lk61/zIgCfvP3ewaBfWFy47+4vPvCF+zdt2bR9547RaGEyGR8/cvzUyZOz6WxpeWk6nR4+fKhjGgwGRPSu//n7PabfesNM97xe+8WIpcTph8hc2eCryAU3ZtomrhqoIQupJBqGQ6F9pZHc8tgW9rOSAbPcLvlkA29EbmOKYvYfWEkQAUNqbFiD85SHOWv1LY4lwhu//iUX7dr+fz9658lTq4Nh33fd+uraw6fOWJ0ydzwYDLjrTpw40Xf6mle+6J4vfvnQocOCbtvy4Or+Ln78KE0exup0It0ySUbBtvEBUQjCC5pHRNRNa9WDJlQC7OU9RU7RoA75bN1EOxJDH3Lquo11sgYHPt3PqxdFQAz1gXItHH1KakMN2DCTqo4n05tuuOaKPbs/ece9Dzz46JGjp6BZaKCz6VQ21peXhjc8/8qX3nT93r2X3PjIof/8y++drp/4d995+XOvWp6tbeUzB779+pOf+svlL58s/ZJOp2mcG1esAQjn+ILAqWJSQdgiNScsxDbL2A7AOPbPcbv2MWwHAm1idHxeFFsIbFQBc82Axi9v6tHOLjo7P1eizPX18crWTa+/9abTp1cPPX784GNHT55aK6VAZXlpdNGu7ZdcvHPHjm2llFOnzuzevet73nLr5iN/+txnL83WZj1RGey+8srhz//T2fe/c3j/mi4PZVZqi9eKGLMgxZoFOd7xPvlQSRNkC9Urcpax390AU2VKzs9HcNssV2abYs/gkq+NMMBJx8lkOhoNx+NxC0HP8+q3V9eRiIzHsrS0cNW+S6+68rKzvs2slI2NMRH1Ha+N5brdZWXLYLYm3DFUmXQmO/buKb/4vZO3/+rqQ0cXloaTUjRdcYPhs/zHAT0iVR8YSjJS6zZfcGOe2iYHNhTDNZvG18SMbPeAPNERR+gzTleivps8OMCxQ48f3bFjZe8VzyLCeDzd2DivEOhrXUQQkWkps2mZzub+VEelYJRVrHSzyVJ/TGb14EqRTTu2rr1878E/v/eCw6e7UT+TDJKcLEiXUPkGmIfwXsjeEdkiBrroqn9G6BD9yub6ZlkH6eglR9w1gwtjxpJNrq2t7AFeHK5/dDD+7FRGgF599b7Nm5cn01mZzVpJPQ2vs6p/CDyezL795u6Nr71ktjrp4gxjEepx6MuP6He/63lfOTpcHk5mMyiiU3S0zmpXXMWaTkt2M4OKQlSK1YamPxEv7XEFkZhZGhBojuQEvJdEwlswiHQ2GzybJw/0dApE93zuMyKSVcJP8Evn7zg7ofx3dNFZ/z/ngXP/biU9P3nPUGXtH9x6+WyVOiaCdoyZXLT38oPvfutd3/Wu6x452o8GpZTIjqEB8U5HS8tk18jXkNJFV32/zYm0dn0+GACNQkRDV7hOULRvjTF68P7d0eiewMNOjnaTLxMpcWfdnWqD0rBgcd6j7QjfngjMu+eSm57byPNZ9AQCbTiGbCSfaBuZE89qBkq7HaFqPElnpUxn+NffecE3v2o8W6WOvaihFOrpkXseGH7bL12zNkGHUkQA1WigHvSMqBTzvaLWUt1UoUCKQvoqFjtKZhs5SQhtB+2aisRse2Hj7axC0k6eGaHKMi68XRZ3hzjb+c4c44BifPFcM7QciONOW1116hn+7Pzix2orux4Rj+fGk7eSLLvJ9EiUmjluycqzmuNVEUMsBC3lx96zoXTwTbecmq52PYFUu56nG9uu3XPwxr2nP3DXls0jQ/i+1hEKCHyKfRqYhowjVdFeY/q2F71DcuoViURvTD9xHDvKMjgShxOYRJWKjzlVEiKSqdKUiKEcc7F8ZIj62A8fWKbwVkXeiNPnSkePQC8aDuVA/fh6KEhraVOE+EhOyiuX/R8XhlTq0AZFWhpWQhPEJsgboutIlPGjv74TwJtuOTVdtRa6DsMXBrPIjkhrfJx61iY0CzFnHpf8fEDTND+OfMQfq8yFx8ChCMb/MFSaQeLkdajWy4vZqujUhm/FAL846ur9iGw0IEseIeHWJvtJQKX2xRpZCZNGpIpYI0axYcvSHOXMMpI4zIisHlH/fUWa4xYaR9/sPUSISQad/Mj/2gbVN736NDZYBMPhyccOLXzqweVBPzPWwac0INghCCFLFmvIZuMKTDLd8ravO/tYdu0jHRMrgJiV5/06ApIiX9h6uWwB2BzBROyYuDvrtJslrx2xNY5mNkkQ0Zi1lva9Wn8JcgUKiUx41A4nJ1OxugASw/CagFYjKytB9XgmXJgEqn9y52jbUC67aNZNTj50YPrD79lz96MLC/2slPgIBIMgnjiApmZIsENZzyC0a9/bYz6w+1u12z6bpAPIQCo36LPOUY15hTF7yScSeRdl8pGecZYt5iFm47WMP/JOv8en/nmfvPDAXxvE1qkmjdwy/WQjzef+6pnUuYqCKi0VCVpMg2ETIimi62Ps27WxfWn9/kOLx1ZpaTAVTf/h80tAoiIIGCpSAJuDIoqiKuaBodItbX9hHPOba8HhR4QBqrgF9fBGDhJBfSGiHgEtkmk8R+5327pVQwKUJF0eL2qWtFZ6SP1vVWqg2YDhdMPQR5VOeALbi7HimSjJrWrj3TT5NUk2jSHDXo6cpkeOjVTLsC9F1IupnOIXG4HexAFt6Cs+04xcuj3MdLq5FxtPT3HCwxcu0gesYj1hyXvPcQMCbX1ZtGRXlXCZ4TYjkNaw5aYk7gLUR3UooFrykHhM09R81Jv5Sn69OaE25chp8v0XxEnFZMpSKnYVcxSGf3zv1ypBIYgAKmXU67CzxJpYWVu1XVWN8oMiAI6GfaYZJuzeX0Bx9MbPBktsd3vfJBoae802Kl38zLY32BXY8DnkWFf24nV1NgkkMYi43lIfQgFSTg2z5iM2+Z1iQHmiHY02JBpFP1mRnJs9MFD8NKnMcDy9yVIlOIG0S485bVBASxE1fBlxlkIU4mkZi7CChXa6OeoVPAY28Yv0kaL0UNastiW/tLZbCfwTeTVHQyQ+McWHYRbvccYcHomRy+SuIpqzuIqEZli6jUhQmDjGT1CsctKo7ghEshFJ2DAKglla3BlnFH1v50Nhc/xtncSd88N+BsPmHoRLUM3lSyzblASGwXHvHVSEV0PIvFRUoX3s7GAjfARol+w/+faTiHTYjZUpCdlZe/uWTJTmOtv6WkqYYta33Z1DGSla39lxZUPYRe0EefTkIZ+H5o2KkKS4MwaNL44NT9rknWJr14KEcLAhDWmflhDFRl1lfOAisfxiY1WgucpzRr8m5UMMRFXGZoV6G2OfTRatuIVUIpkEELNK6kHW/0SLRCUUFZsyZtkb+7p21Ix9hm7tr2mnoUr0B899SyAWFAvDQ/18HpSESw8L43qnUFIrGhT2uckaipvMDCJj3hISkTyph+nq0htK0gjEzHlq3laR9Lfw240biOljqoSMhzXsQBQbxsf1UXclccrYdYpg9oRCh8VPxcNaMxl7UTSCZiiUWLWwt8DxBusCMERt2Ku7VIUl1dQn1XsXC1YiVimoo58iBKgRuQ8SqdpF5sJRMGvZvlobUr1xZuiq40X10TJvRhQo8QrJvY+Mb3Oh/DBRoWZZz4mENfTDXlgQT+iDn1ObjUsxWx0+9dU9MBOTQ2kA5hpN/0vMlBfj20TVp26rgO18AUczah+nlblAa6lvM6Bju3nxh2sC6vzHFs42DESioDnMqpWFS8xTGbroJyB+dCgsidTMkkQ2y6On5gyMQGwqWpCd4ZDtv6LCQTTBj03IWf6DfNpicEHJT9lk3OqobNJxjH4zIbHaucii4CCkxVrg+wQCdyQ2Np2jMsanLxlX4VybGhbyTlue5rFnSjgSw0iJwLwBbYRbodzemRAhEzL6vJZENVFaFFDWOle32oSsNc7qT/PhmV8MByCBgly93NoI7Cxw9RAOqCCiNmzReSEzYn1N0sdxMqKANOjizFIRn87YASoQhsnAVQTsFdY59iGIGxXKmCDy8jEdItrrMykkZ6pKtBtXAkGUmNPPGkMotacaGYJxcxWFVkhWCDFjxxFpMBnzIqkCiBi52pC071md7+UHMeczHbJnuFIYNYoOz2yrGqpge8cDMY6kSsS8ZtsNUnBWEZErFAvAPmHdlplBbKfvKcVgqF9LEHF+HKr22Y/esl6HCoJ71DrxKXL+QYs6Pe1RnE8Uz+I8Q5QSpWmhM4G+g6+uoYCNG0xDb3FC9aK5UkkKxcc41EmvWeWXVZpNwBUsd4ihfi/pPdpqhiwZlCNq6q7BMao7abYcGNtU/7jTjrPkFFBSJfoR+UFizU7LRFByopWDCHcr72NYYl5I0n1u9AOZNcfUIk0TERsisApzWkfbImBloxDhJCUXVIOodnY63KwETm0Ij4x4yWVZEHJ1OOswFIFKvSyl1glZ5BR4MUJTMEHFpp+YQkAoUA1ZWwmv5VKgM4jpAxbd6wfRZj2HvOt6+OTIwLhpMUKCfDI7/PQ31aXXJKA0DyZ7K9Ocj0qZJNUmMZAMQWuFarV+Ypu6Z8MTRMJH0hBRw/+0Mdp8iFefqeQ2KnGRwaFeVQ1nZ+eyiF1jlfNYQhIS7v/YC7BQrHGHAxJ28G6/zHytgNNJwMu+6gRReFSWzT9IvHUsNZRD9DFqh5Cn3BNb1tBMEgdpnQCMKo4mLxbhfZ68SJQpXkzSEMihUpn28kRWAs1qcEgJEqy3xlm+KlqDoZFlpOSyDXWRKJjZY2gvRoxTkl4XDdVi45i8hwqEhZXEe6p4TMBOhJE1OpBocWxtGy1M4yg9sn3PkLT76smJmoN0u5bbgSryrOf+m9yv4/MEpmLxtDbtZipSlbROCfzntKRJEiTVKlJCEpUgyjA4unaEOSIJxk17ROGtibEGrMRRtRigP7WdKOJPDrBDYb9svRhwBqPJmWQnWdulDABa2iaMDpYsnHZ/6flSESOS/OXqQTEFtqw5HzReIE6rpCHK+ZZOMraEaO7TRi2yCDdTNzWBXOm8TEZqmWMyagRewri5kwjyVXv1ONtWxY8NZ/Nh61MDmzdtOiUMtgYHwl6AGCbCmwgxPEcfo7sRRDSywSPlIwZDNacQpCkDxQH7mNVVwSe1BlNDoQKjUFTie0IMGfZ4PKISBiHjgkpRhJ1pLHvd/gn8kRRbtfItmWHcdU091jDYvYSLNnLCCPFSZkRtjzKxeDrQ7Al5cTaIPYQLp01gtSCbEuCbWhRPdTWzpYOxo8YyIKYfuLcw2yhVMOF+HSMr5UjNmsLRIP3DLTtnOh+LUa61ajDqFVD610okqmHcq2/QUCOoimmA1KyLSokiT0dQAWczUeOf3jtctQSHz+wx7KfOtCgTWaLGJFPUh+gi2gAGGol+3gB7+jarR7KztDJlx8CI/iol12x/iy/UeW9z2sk3kJsUJWJIYk44uVoTkrFdVJO1sO0ovs1yiakuqD/gUVWkc30kWEtBS1CT1akijq8CWtnpSC9DJDMH1uynV2/1U6DMNSXgX4OJIfaIxA+KWKmSo0zEpuU22yoaoLGfJomVJbCiVDoI2VvI/EFg04Q9LQ2X56FS7TSNTb1ar0tRIh+2rxFMpf5D/zQPpvuAnYazkwhfNEqPG2ujQRZFkgAe1Xqc7MbKAY5VR1eqtVcv+OFoPiaqTFEv4uqZeEaJuZongBisDtQ4ViBbUufTOF2C79+Qgfr4jTjpGqOZsowlBxdYRKXZKVUzMA7/lVx0jJAIkJNk0JxDjmpMsyjZf74l4GqpRLhip/A0DRSeQAxBw4XGkEBSdaQ9QABI70/yiUmRugsZqLJ7CL8TUcgFVWWDmumBiUR9zKgqvCAIxka4eEzYHgeIw0qfh+Oi8AawAeqr8QngS40Rcs8tCX8stxaZ+1SLaPGvaXfShXs05ohX0+zMu1/fwlI5hrrQKYAms1YxUkglgWmYI6MiYiC9BLHGzoQYw+yGMuUBJ59VQJF3JIJGIOZ0l8F2y71oFD5Ez9jqHIK3EHLsHzAn3ENCy7QzVF1vpZ5jNpHbMZUkqXO525YjsajJDVFoS2RvPM4KkKAVws4ZH2d7At2GqEhRw4tIxAdwIhgHLlbY0KsUcGfrK2rhjq1Fogz2vnw1uWq2wtJmTGDLCojxFjaGT3yguZVKaHTz05pmiQoJCWjkCbWczZtMQ2Xiokt5bPmwYL6ZPY6ORINzgpK9GtwmZUKhovvqkJsl9tiJklqgsD+pKDXfqxqmP2jwSk6EisS5gcpYWEJGxI6+UGQCAZvtYFUnNgNXxYrjHAizOr2ToagAbNPhvNQuhmq11E2duKFp4X2uaKQ8nSCqW95PRjngyvk2kQPIPLQl6SsQTQ1BmIlc6rQwESkKJJuuJQmR4mnjgMY6edcr8ajQ0Q6swQ2hJpBTLdoAzd6h9wO/0LalB7Gz5+F7fYat4TWvobZ7HN1Z0KRO9SgUlognjS6y0UmWYFjUoLhn9qPzQRBE7niRAiSHyp4i9XojSQoiKSKFT3AJU1OposZ3Z3BfMWVgz7lFjzRuQqCaZYsniDQ1uY41LRtcu5o09RBi4anx3gz5f9zHzHI+shhsAAAAAElFTkSuQmCC">
+      <!--?lit$066521063$-->
+    </div>
+
+    <!-- This needs to be separate from the source-indicator since it can't
+     be contained inside of a position:relative parent element. -->
+    <!--?lit$066521063$-->
+    <div id="content">
+      <!--Note: We wrap inspect-views in a div so that the outer div
+          doesn't shrink (because it's not display: flex).-->
+      <div>
+        <div id="name-and-version" class="layout-horizontal-center">
+          <div id="name" role="heading" aria-level="3" class="clippable-flex-text">
+            <!--?lit$066521063$-->NeoExamShield
+          </div>
+          <span id="version" class="cr-secondary-text" hidden="">
+            <!--?lit$066521063$-->Release Version
+          </span>
+        </div>
+      </div>
+      <div id="description" class="cr-secondary-text multiline-clippable-text">
+        <!--?lit$066521063$-->Prevents malpractice by identifying and blocking third-party browser extensions during tests on the Iamneo portal.
+      </div>
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+    </div>
+  </div>
+  <div id="button-strip" class="layout-horizontal-center cr-secondary-text">
+    <div class="layout-horizontal-center flex">
+      <cr-button id="detailsButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div><cr-ripple id="ink"><template shadowrootmode="open"><!----></template></cr-ripple></template>
+        Details
+      </cr-button>
+      <cr-button id="removeButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Remove
+      </cr-button>
+      <!--?lit$066521063$-->
+    </div>
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <cr-tooltip-icon id="parentDisabledPermissionsToolTip" tooltip-text="Your parent has disabled extension permissions" icon-class="cr20:kite" icon-aria-label="Your parent has disabled extension permissions" hidden=""><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="Your parent has disabled extension permissions" icon="cr20:kite"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 20 20" class="cr-iconset-svg-icon_">
+ <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6327 8.00094L10.3199 2L16 8.00094L10.1848 16.8673C10.0995 16.9873 10.0071 17.1074 9.90047 17.2199C9.42417 17.7225 8.79147 18 8.11611 18C7.44076 18 6.80806 17.7225 6.33175 17.2199C5.85545 16.7173 5.59242 16.0497 5.59242 15.3371C5.59242 14.977 5.46445 14.647 5.22275 14.3919C4.98104 14.1369 4.66825 14.0019 4.32701 14.0019H4V12.6667H4.32701C5.00237 12.6667 5.63507 12.9442 6.11137 13.4468C6.58768 13.9494 6.85071 14.617 6.85071 15.3296C6.85071 15.6896 6.97867 16.0197 7.22038 16.2747C7.46209 16.5298 7.77488 16.6648 8.11611 16.6648C8.45735 16.6648 8.77014 16.5223 9.01185 16.2747C9.02396 16.2601 9.03607 16.246 9.04808 16.2319C9.08541 16.1883 9.12176 16.1458 9.15403 16.0947L9.55213 15.4946L4.6327 8.00094ZM10.3199 13.9371L6.53802 8.17116L10.3199 4.1814L14.0963 8.17103L10.3199 13.9371Z">
+        </path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$-->Your parent has disabled extension permissions</slot>
+</cr-tooltip></template>
+    </cr-tooltip-icon>
+    <cr-tooltip id="enable-toggle-tooltip" for="enableToggle" position="left" aria-hidden="true" animation-delay="0" fit-to-visible-bounds="" style="--paper-tooltip-delay-in: 0ms; inset: 375.025px auto auto 553.3px;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" part="tooltip" class="" hidden="">
+      <slot></slot>
+    </div></template>
+      <!--?lit$066521063$-->This extension may read and change site information or run in the background
+    </cr-tooltip>
+    <cr-toggle id="enableToggle" aria-describedby="a11yAssociation enable-toggle-tooltip" aria-label="On, extension enabled" checked="" role="button" tabindex="0" aria-pressed="true" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+    </cr-toggle>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+          </extensions-item><!----><!---->
+          <extensions-item id="fmkadmapgofadopljbjfkapdkoienihi"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<!-- Invisible instead of hidden because VoiceOver refuses to read text of
+  element that's hidden when referenced by an aria label.  Unfortunately,
+  this text can be found by Ctrl + F because it isn't hidden. -->
+<div id="a11yAssociation" aria-hidden="true">
+  <!--?lit$066521063$-->Related to React Developer Tools
+</div>
+<div id="card" class="enabled">
+  <div id="main">
+    <div id="icon-wrapper">
+      <img id="icon" aria-describedby="a11yAssociation" alt="" src="data:image/png;base64,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">
+      <!--?lit$066521063$-->
+    </div>
+
+    <!-- This needs to be separate from the source-indicator since it can't
+     be contained inside of a position:relative parent element. -->
+    <!--?lit$066521063$-->
+    <div id="content">
+      <!--Note: We wrap inspect-views in a div so that the outer div
+          doesn't shrink (because it's not display: flex).-->
+      <div>
+        <div id="name-and-version" class="layout-horizontal-center">
+          <div id="name" role="heading" aria-level="3" class="clippable-flex-text">
+            <!--?lit$066521063$-->React Developer Tools
+          </div>
+          <span id="version" class="cr-secondary-text" hidden="">
+            <!--?lit$066521063$-->6.1.1 (2/7/2025)
+          </span>
+        </div>
+      </div>
+      <div id="description" class="cr-secondary-text multiline-clippable-text">
+        <!--?lit$066521063$-->Adds React debugging tools to the Chrome Developer Tools.
+
+Created from revision 44c3d3d665 on 2/7/2025.
+      </div>
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+    </div>
+  </div>
+  <div id="button-strip" class="layout-horizontal-center cr-secondary-text">
+    <div class="layout-horizontal-center flex">
+      <cr-button id="detailsButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Details
+      </cr-button>
+      <cr-button id="removeButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="background"></div>
+<slot id="prefixIcon" name="prefix-icon">
+</slot>
+<span id="content"><slot></slot></span>
+<slot id="suffixIcon" name="suffix-icon">
+</slot>
+<div id="hoverBackground" part="hoverBackground"></div></template>
+        Remove
+      </cr-button>
+      <!--?lit$066521063$-->
+    </div>
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <cr-tooltip-icon id="parentDisabledPermissionsToolTip" tooltip-text="Your parent has disabled extension permissions" icon-class="cr20:kite" icon-aria-label="Your parent has disabled extension permissions" hidden=""><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="Your parent has disabled extension permissions" icon="cr20:kite"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 20 20" class="cr-iconset-svg-icon_">
+ <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6327 8.00094L10.3199 2L16 8.00094L10.1848 16.8673C10.0995 16.9873 10.0071 17.1074 9.90047 17.2199C9.42417 17.7225 8.79147 18 8.11611 18C7.44076 18 6.80806 17.7225 6.33175 17.2199C5.85545 16.7173 5.59242 16.0497 5.59242 15.3371C5.59242 14.977 5.46445 14.647 5.22275 14.3919C4.98104 14.1369 4.66825 14.0019 4.32701 14.0019H4V12.6667H4.32701C5.00237 12.6667 5.63507 12.9442 6.11137 13.4468C6.58768 13.9494 6.85071 14.617 6.85071 15.3296C6.85071 15.6896 6.97867 16.0197 7.22038 16.2747C7.46209 16.5298 7.77488 16.6648 8.11611 16.6648C8.45735 16.6648 8.77014 16.5223 9.01185 16.2747C9.02396 16.2601 9.03607 16.246 9.04808 16.2319C9.08541 16.1883 9.12176 16.1458 9.15403 16.0947L9.55213 15.4946L4.6327 8.00094ZM10.3199 13.9371L6.53802 8.17116L10.3199 4.1814L14.0963 8.17103L10.3199 13.9371Z">
+        </path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$-->Your parent has disabled extension permissions</slot>
+</cr-tooltip></template>
+    </cr-tooltip-icon>
+    <cr-tooltip id="enable-toggle-tooltip" for="enableToggle" position="left" aria-hidden="true" animation-delay="0" fit-to-visible-bounds="" style="--paper-tooltip-delay-in: 0ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+      <!--?lit$066521063$-->This extension may read and change site information or run in the background
+    </cr-tooltip>
+    <cr-toggle id="enableToggle" aria-describedby="a11yAssociation enable-toggle-tooltip" aria-label="On, extension enabled" checked="" role="button" tabindex="0" aria-pressed="true" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+    </cr-toggle>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+          </extensions-item><!---->
+      </div>
+    </div>
+
+    <div id="chrome-apps-section" hidden="">
+      <!-- section-header needs to left-align with the grid content below, and
+           the easiest way to achieve this is to make it a grid as well. -->
+      <h2 class="section-header items-container">Chrome Apps</h2>
+      <div class="items-container">
+        <!--?lit$066521063$-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+    </extensions-item-list>
+    <!---->
+        <extensions-detail-view slot="view" incognito-available="" class=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<!-- Invisible instead of hidden because VoiceOver refuses to read text of
+element that's hidden when referenced by an aria label. Unfortunately,
+this text can be found by Ctrl + F because it isn't hidden. -->
+<div id="a11yAssociation" aria-hidden="true">
+  <!--?lit$066521063$-->Related to NeoExamShield
+</div>
+<div class="page-container" id="container">
+  <div class="page-content">
+    <div class="page-header">
+      <cr-icon-button class="icon-arrow-back no-overlap" id="closeButton" aria-label="NeoExamShield details page back button" aria-roledescription="Click to navigate away from NeoExamShield details page." role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+</div></template>
+      </cr-icon-button>
+      <img id="icon" alt="" src="data:image/png;base64,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">
+      <span id="name" class="cr-title-text" role="heading" aria-level="1">
+        <!--?lit$066521063$-->NeoExamShield
+      </span>
+      <!--?lit$066521063$-->
+      <!--?lit$066521063$-->
+    </div>
+
+    <!--?lit$066521063$-->
+
+    <!--?lit$066521063$-->
+
+    <div class="cr-row first control-line" id="enable-section">
+      <span class="enabled-text">
+        <!--?lit$066521063$-->On
+      </span>
+      <div class="layout-horizontal">
+        <cr-tooltip-icon icon-class="cr20:domain" hidden="" tooltip-text="" icon-aria-label=""><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="" icon="cr20:domain"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_">
+ <g viewBox="0 -960 960 960">
+        <path d="M96-144v-672h384v144h384v528H96Zm72-72h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm168 456h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm0-152h72v-72h-72v72Zm144 456h312v-384H480v80h72v72h-72v80h72v72h-72v80Zm168-232v-72h72v72h-72Zm0 152v-72h72v72h-72Z"></path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$--></slot>
+</cr-tooltip></template>
+        </cr-tooltip-icon>
+        <!--?lit$066521063$-->
+        <cr-tooltip-icon id="parentDisabledPermissionsToolTip" tooltip-text="Your parent has disabled extension permissions" icon-class="cr20:kite" icon-aria-label="Your parent has disabled extension permissions" hidden=""><template shadowrootmode="open"><!---->
+<cr-icon id="indicator" tabindex="0" aria-describedby="tooltip" role="img" aria-label="Your parent has disabled extension permissions" icon="cr20:kite"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 20 20" class="cr-iconset-svg-icon_">
+ <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6327 8.00094L10.3199 2L16 8.00094L10.1848 16.8673C10.0995 16.9873 10.0071 17.1074 9.90047 17.2199C9.42417 17.7225 8.79147 18 8.11611 18C7.44076 18 6.80806 17.7225 6.33175 17.2199C5.85545 16.7173 5.59242 16.0497 5.59242 15.3371C5.59242 14.977 5.46445 14.647 5.22275 14.3919C4.98104 14.1369 4.66825 14.0019 4.32701 14.0019H4V12.6667H4.32701C5.00237 12.6667 5.63507 12.9442 6.11137 13.4468C6.58768 13.9494 6.85071 14.617 6.85071 15.3296C6.85071 15.6896 6.97867 16.0197 7.22038 16.2747C7.46209 16.5298 7.77488 16.6648 8.11611 16.6648C8.45735 16.6648 8.77014 16.5223 9.01185 16.2747C9.02396 16.2601 9.03607 16.246 9.04808 16.2319C9.08541 16.1883 9.12176 16.1458 9.15403 16.0947L9.55213 15.4946L4.6327 8.00094ZM10.3199 13.9371L6.53802 8.17116L10.3199 4.1814L14.0963 8.17103L10.3199 13.9371Z">
+        </path>
+      </g></svg><!----></template>
+</cr-icon>
+<cr-tooltip id="tooltip" for="indicator" fit-to-visible-bounds="" part="tooltip" position="top" style="--paper-tooltip-delay-in: 500ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+  <slot name="tooltip-text"><!--?lit$066521063$-->Your parent has disabled extension permissions</slot>
+</cr-tooltip></template>
+        </cr-tooltip-icon>
+        <cr-toggle id="enableToggle" aria-describedby="name enable-toggle-tooltip" aria-label="On, extension enabled" checked="" role="button" tabindex="0" aria-pressed="true" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+        </cr-toggle>
+        <cr-tooltip id="enable-toggle-tooltip" for="enableToggle" position="left" aria-hidden="true" animation-delay="0" fit-to-visible-bounds="" style="--paper-tooltip-delay-in: 0ms;"><template shadowrootmode="open"><!---->
+    <div id="tooltip" hidden="" part="tooltip">
+      <slot></slot>
+    </div></template>
+          <!--?lit$066521063$-->This extension may read and change site information or run in the background
+        </cr-tooltip>
+      </div>
+    </div>
+    <!--?lit$066521063$-->
+    <!--?lit$066521063$-->
+    <div class="section">
+      <div class="section-title" role="heading" aria-level="2">
+        Description
+      </div>
+      <div class="section-content" id="description">
+        <!--?lit$066521063$-->Prevents malpractice by identifying and blocking third-party browser extensions during tests on the Iamneo portal.
+      </div>
+    </div>
+    <div class="section hr">
+      <div class="section-title" role="heading" aria-level="2">
+        Version
+      </div>
+      <div class="section-content"><!--?lit$066521063$-->Release Version</div>
+    </div>
+    <div class="section hr">
+      <div class="section-title" role="heading" aria-level="2">
+        Size
+      </div>
+      <div class="section-content" id="size">
+        <span><!--?lit$066521063$-->&lt; 1 MB</span>
+        <div class="spinner" hidden=""></div>
+      </div>
+    </div>
+    <div class="section hr" id="id-section" hidden="">
+      <div class="section-title" role="heading" aria-level="2">
+        ID
+      </div>
+      <div class="section-content"><!--?lit$066521063$-->deojfdehldjjfmcjcfaojgaibalafifc</div>
+    </div>
+    <!--?lit$066521063$-->
+    <div class="section hr">
+      <div class="section-title" role="heading" aria-level="2">
+        Permissions
+      </div>
+      <div class="section-content">
+        <span id="no-permissions" hidden="">
+          <!--?lit$066521063$-->This extension requires no special permissions
+        </span>
+        <ul id="permissions-list">
+          <!--?lit$066521063$--><!---->
+            <li>
+              <!--?lit$066521063$-->Read your browsing history
+              <ul hidden="">
+                <!--?lit$066521063$-->
+              </ul>
+            </li><!----><!---->
+            <li>
+              <!--?lit$066521063$-->Block content on any page
+              <ul hidden="">
+                <!--?lit$066521063$-->
+              </ul>
+            </li><!----><!---->
+            <li>
+              <!--?lit$066521063$-->Manage your apps, extensions, and themes
+              <ul hidden="">
+                <!--?lit$066521063$-->
+              </ul>
+            </li><!---->
+          <li hidden="">
+            This extension has no additional site access
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--?lit$066521063$-->
+      <div class="section hr">
+        <div class="section-title" role="heading" aria-level="2">
+          Site access
+        </div>
+        <div class="section-content">
+          <span id="no-site-access" hidden="">
+            This extension has no additional site access
+          </span>
+          <!--?lit$066521063$-->
+            <extensions-runtime-host-permissions item-id="deojfdehldjjfmcjcfaojgaibalafifc"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<!--?lit$066521063$-->
+  <div id="permissions-mode">
+    <div id="section-heading">
+      <div id="section-heading-heading">
+        <span id="section-heading-text">
+          Allow this extension to read and change all your data on websites you visit:
+        </span>
+        <a class="link-icon-button" aria-label="Learn more about extension permissions" href="https://support.google.com/chrome?p=enable_extensions" target="_blank">
+          <cr-icon icon="cr:help-outline"><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 24 24" class="cr-iconset-svg-icon_">
+ <g>
+        <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+        </path>
+      </g></svg><!----></template></cr-icon>
+        </a>
+      </div>
+      <div>
+        <select id="hostAccess" class="md-select" aria-labelledby="section-heading-text">
+          <option value="ON_CLICK">
+            On click
+          </option>
+          <option value="ON_SPECIFIC_SITES">
+            On specific sites
+          </option>
+          <option value="ON_ALL_SITES" selected="">
+            On all sites
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+<!--?lit$066521063$-->
+
+<cr-action-menu id="hostActionMenu" role-description="Menu"><template shadowrootmode="open"><!---->
+<dialog id="dialog" part="dialog" role="application" aria-roledescription="Menu">
+  <div id="wrapper" class="item-wrapper" role="menu" tabindex="-1">
+    <slot id="contentNode"></slot>
+  </div>
+</dialog></template>
+  <button class="dropdown-item" id="action-menu-edit" role="menuitem">
+    Edit
+  </button>
+  <button class="dropdown-item" id="action-menu-remove" role="menuitem">
+    Remove
+  </button>
+</cr-action-menu>
+<!--?lit$066521063$-->
+<!--?lit$066521063$-->
+<!--_html_template_end_--></template>
+            </extensions-runtime-host-permissions>
+          <!--?lit$066521063$-->
+          <!--?lit$066521063$-->
+        </div>
+      </div>
+    <!--?lit$066521063$-->
+    <cr-link-row class="hr" id="siteSettings" label="Site settings" external=""><template shadowrootmode="open"><!---->
+    <!--?lit$066521063$-->
+<div id="labelWrapper">
+  <div id="label" aria-hidden="true">
+    <!--?lit$066521063$-->Site settings
+    <slot name="label"></slot>
+  </div>
+  <div id="subLabel" class="cr-secondary-text" aria-hidden="true">
+    <!--?lit$066521063$-->
+    <slot name="sub-label"></slot>
+  </div>
+</div>
+<slot></slot>
+<div id="buttonAriaDescription" aria-hidden="true">
+  <!--?lit$066521063$-->Opens in new tab
+</div>
+<cr-icon-button id="icon" role="link" part="icon" aria-describedby="buttonAriaDescription" aria-labelledby="label subLabel" iron-icon="cr:open-in-new" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+<cr-icon><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_" role="none">
+ <g viewBox="0 -960 960 960">
+        <path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h528v-264h72v264q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm171-192-51-51 357-357H576v-72h240v240h-72v-117L387-336Z">
+        </path>
+      </g></svg><!----></template></cr-icon></div></template>
+</cr-icon-button></template></cr-link-row>
+    <!--?lit$066521063$-->
+      <div id="options-section">
+        <!--?lit$066521063$-->
+          <extensions-toggle-row id="pin-to-toolbar" class="hr" checked=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<label id="label" aria-hidden="true">
+  <input id="native" type="checkbox">
+  <slot></slot>
+</label>
+<cr-toggle id="crToggle" aria-labelledby="label" checked="" role="button" tabindex="0" aria-pressed="true" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+</cr-toggle>
+<!--_html_template_end_--></template>
+            <span>Pin to toolbar</span>
+          </extensions-toggle-row>
+        <!--?lit$066521063$-->
+          <extensions-toggle-row id="allow-incognito" class="hr"><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<label id="label" aria-hidden="true">
+  <input id="native" type="checkbox">
+  <slot></slot>
+</label>
+<cr-toggle id="crToggle" aria-labelledby="label" role="button" tabindex="0" aria-pressed="false" aria-disabled="false"><template shadowrootmode="open"><!---->
+<span id="bar"></span>
+<span id="knob"></span></template>
+</cr-toggle>
+<!--_html_template_end_--></template>
+            <div>
+              <div>Allow in Incognito</div>
+              <div class="section-content">Warning: Google Chrome cannot prevent extensions from recording your browsing history. To disable this extension in Incognito mode, unselect this option.</div>
+            </div>
+          </extensions-toggle-row>
+        <!--?lit$066521063$-->
+        <!--?lit$066521063$-->
+      </div>
+    <cr-link-row class="hr" id="extensionsOptions" label="Extension options" external="" hidden=""><template shadowrootmode="open"><!---->
+    <!--?lit$066521063$-->
+<div id="labelWrapper">
+  <div id="label" aria-hidden="true">
+    <!--?lit$066521063$-->Extension options
+    <slot name="label"></slot>
+  </div>
+  <div id="subLabel" class="cr-secondary-text" aria-hidden="true">
+    <!--?lit$066521063$-->
+    <slot name="sub-label"></slot>
+  </div>
+</div>
+<slot></slot>
+<div id="buttonAriaDescription" aria-hidden="true">
+  <!--?lit$066521063$-->Opens in new tab
+</div>
+<cr-icon-button id="icon" role="link" part="icon" aria-describedby="buttonAriaDescription" aria-labelledby="label subLabel" iron-icon="cr:open-in-new" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+<cr-icon><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_" role="none">
+ <g viewBox="0 -960 960 960">
+        <path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h528v-264h72v264q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm171-192-51-51 357-357H576v-72h240v240h-72v-117L387-336Z">
+        </path>
+      </g></svg><!----></template></cr-icon></div></template>
+</cr-icon-button></template>
+    </cr-link-row>
+    <cr-link-row class="hr" id="extensionsActivityLogLink" label="View activity log" role-description="Subpage button" hidden=""><template shadowrootmode="open"><!---->
+    <!--?lit$066521063$-->
+<div id="labelWrapper">
+  <div id="label" aria-hidden="true">
+    <!--?lit$066521063$-->View activity log
+    <slot name="label"></slot>
+  </div>
+  <div id="subLabel" class="cr-secondary-text" aria-hidden="true">
+    <!--?lit$066521063$-->
+    <slot name="sub-label"></slot>
+  </div>
+</div>
+<slot></slot>
+<div id="buttonAriaDescription" aria-hidden="true">
+  <!--?lit$066521063$-->
+</div>
+<cr-icon-button id="icon" role="link" part="icon" aria-describedby="buttonAriaDescription" aria-labelledby="label subLabel" iron-icon="cr:chevron-right" aria-roledescription="Subpage button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+<cr-icon><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 24 24" class="cr-iconset-svg-icon_" role="none">
+ <g>
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+      </g></svg><!----></template></cr-icon></div></template>
+</cr-icon-button></template>
+    </cr-link-row>
+    <cr-link-row class="hr" id="extensionWebsite" label="Open extension website" external="" hidden=""><template shadowrootmode="open"><!---->
+    <!--?lit$066521063$-->
+<div id="labelWrapper">
+  <div id="label" aria-hidden="true">
+    <!--?lit$066521063$-->Open extension website
+    <slot name="label"></slot>
+  </div>
+  <div id="subLabel" class="cr-secondary-text" aria-hidden="true">
+    <!--?lit$066521063$-->
+    <slot name="sub-label"></slot>
+  </div>
+</div>
+<slot></slot>
+<div id="buttonAriaDescription" aria-hidden="true">
+  <!--?lit$066521063$-->Opens in new tab
+</div>
+<cr-icon-button id="icon" role="link" part="icon" aria-describedby="buttonAriaDescription" aria-labelledby="label subLabel" iron-icon="cr:open-in-new" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+<cr-icon><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_" role="none">
+ <g viewBox="0 -960 960 960">
+        <path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h528v-264h72v264q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm171-192-51-51 357-357H576v-72h240v240h-72v-117L387-336Z">
+        </path>
+      </g></svg><!----></template></cr-icon></div></template>
+</cr-icon-button></template>
+    </cr-link-row>
+    <cr-link-row class="hr" id="viewInStore" label="View in Chrome Web Store" external=""><template shadowrootmode="open"><!---->
+    <!--?lit$066521063$-->
+<div id="labelWrapper">
+  <div id="label" aria-hidden="true">
+    <!--?lit$066521063$-->View in Chrome Web Store
+    <slot name="label"></slot>
+  </div>
+  <div id="subLabel" class="cr-secondary-text" aria-hidden="true">
+    <!--?lit$066521063$-->
+    <slot name="sub-label"></slot>
+  </div>
+</div>
+<slot></slot>
+<div id="buttonAriaDescription" aria-hidden="true">
+  <!--?lit$066521063$-->Opens in new tab
+</div>
+<cr-icon-button id="icon" role="link" part="icon" aria-describedby="buttonAriaDescription" aria-labelledby="label subLabel" iron-icon="cr:open-in-new" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+<cr-icon><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 -960 960 960" class="cr-iconset-svg-icon_" role="none">
+ <g viewBox="0 -960 960 960">
+        <path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h528v-264h72v264q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm171-192-51-51 357-357H576v-72h240v240h-72v-117L387-336Z">
+        </path>
+      </g></svg><!----></template></cr-icon></div></template>
+</cr-icon-button></template>
+    </cr-link-row>
+    <div class="section hr">
+      <div class="section-title" role="heading" aria-level="2">
+        Source
+      </div>
+      <div id="source" class="section-content">
+        <!--?lit$066521063$-->Chrome Web Store
+      </div>
+      <div id="load-path" class="section-content" hidden="">
+        <span>Loaded from:</span>
+        <a is="action-link" tabindex="0" role="link">
+          <!--?lit$066521063$-->
+        </a>
+      </div>
+    </div>
+    <cr-link-row class="hr" id="remove-extension" label="Remove extension"><template shadowrootmode="open"><!---->
+    <!--?lit$066521063$-->
+<div id="labelWrapper">
+  <div id="label" aria-hidden="true">
+    <!--?lit$066521063$-->Remove extension
+    <slot name="label"></slot>
+  </div>
+  <div id="subLabel" class="cr-secondary-text" aria-hidden="true">
+    <!--?lit$066521063$-->
+    <slot name="sub-label"></slot>
+  </div>
+</div>
+<slot></slot>
+<div id="buttonAriaDescription" aria-hidden="true">
+  <!--?lit$066521063$-->
+</div>
+<cr-icon-button id="icon" role="link" part="icon" aria-describedby="buttonAriaDescription" aria-labelledby="label subLabel" iron-icon="cr:chevron-right" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+<cr-icon><template shadowrootmode="open"><svg id="baseSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;" viewBox="0 0 24 24" class="cr-iconset-svg-icon_" role="none">
+ <g>
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+      </g></svg><!----></template></cr-icon></div></template>
+</cr-icon-button></template>
+    </cr-link-row>
+  </div>
+</div>
+<!--_html_template_end_--></template>
+        </extensions-detail-view><cr-lazy-render-lit id="details-view"><template shadowrootmode="open"><!----><!--?--></template>
+    </cr-lazy-render-lit>
+    <cr-lazy-render-lit id="activity-log"><template shadowrootmode="open"><!----><!--?--></template>
+    </cr-lazy-render-lit>
+    <cr-lazy-render-lit id="site-permissions"><template shadowrootmode="open"><!----><!--?--></template>
+    </cr-lazy-render-lit>
+    <cr-lazy-render-lit id="site-permissions-by-site"><template shadowrootmode="open"><!----><!--?--></template>
+    </cr-lazy-render-lit>
+    <!---->
+        <extensions-keyboard-shortcuts slot="view" class="active"><template shadowrootmode="open"><!----><!--_html_template_start_--><div id="container">
+  <!--?lit$066521063$--><!---->
+    <div class="shortcut-card">
+      <div class="card-title cr-title-text">
+        <img class="icon" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABThJREFUaIHtWV1MHFUYPXd+YAGB2hIhQItJhaTB+qitkEZ9aZr4gE/qi0aiMWB80CI1mtAtjVEeMPhiTA3pAzFqF0vU2EYNWmvSKPGF0JS2htLdECjswhb2Z3ZmZ+71AWaYnZ3ZGXahAcNJJrlz/75z7nfv983eBXaxi13saBC3Dowx0tvb2x6Lxfwcx9Uzxqzttu9e+nmdy/Q+V1xcfKq/v39Ir+PdBBBC2qPR6CCltELTNGiaBlVVjcdaZ353qvcy1uEpl2X5hZaWlttjY2PXAYBzExCNRs+49XnQkGW5Ty8LHvrX6wW/379VnGxh3ULd3d0AAE3T9ut1rh7Y7thxAqxe2XECrPAswKp8u8D1EJvjNaU0o36rQQgBIblTlSGAMUZGRkZe1zTtNIA6u86jo6NZdU5CCqnneR7V1dVobGyEKIrged5RiCEgEAi0q6p6zraXBxKFCjG/p9NpBINBSJKE5uZm+Hw+CIL9ZjHOgKqqnoL8ZpD3ikgkglAoBFVVQSm1nc8sy0hYbW1tBRl2gldBw8PDwGrCgiRJmJ+fR12d7a7eGWFUURQsLy/bthkC9GizVdEl33kJIeA4DoqiQFXVrPZt6wFdsC6A41apWkU8EAGFeJXneXAcB55f//I35yMvX6MFIR/y5jGEEEOEXS4Q7AZtFjZjTqsHrCIK9oD095+QLv+IdCgImkoCunsJwPlKIRxowEMn2lD0VEte8+vkdQ8QQjIWJm8B8Z9/QPybITBJWqsxrTZjAANoMgFl8gaWJm+AlJWi4sVXUXL8+Q3Z0cnrAgr+nKaJBCJdnYidP+dMHtnVNJ7A/cHPEenqBE0mPdvTyetRKKt9Q+QXw1h4+zWkZ0Imhu7k11eNIR2aRrjzFdDo4oYE2K3+hgTQVArh7rfAksls4h7JG3Ml4lh4503QVMqTgFyf1J4z8exnH4EmEvbE9TFZDskmr/dliTiiZ065CnD7PeDJA98Hx3CyctaZeBZHlpO8Xlb+vQnpr6uOdr2EYU9R6JOJi4js82FibzEOL1rczgAiCCh+7jh8rc9CPPAoiMhA5BDE2BUUxX4DmOoghIEJ5yHhmKPtvr4+CIKQcZA1TQvmFGBWPnl/BuHUCkCA00eqcPGnGYM4AJCKSuzp7sFSVRO+mwCmJlbrH6tuwonDjagpfwalcx+D0BUL+bXx6hK4VBDU12DLweH3x3t62XULfTV11ZhooYTHhYPl64vJcah89wNcF5tw8gJweYLg9r3V59I4Qde3HMbDjUjWdK1mtgwypmS0cslxAfXrRkopZFkOKYry0tDQUMAYazfIjPHo3Yy2L57Yg7Y7MYgag+9oK+L1hzDwNYGStqwSgFQa+PRXDgMvH0JR2RGI8WvZQQAAJ91yXMBAIJDzFLt6IJxaMQgxADLP4eyTVQCA4qPHcOUmgaRkk9cRTwF/3CJQy1tsyQMASS+50chfQIqms8z+vr8Ms2U8+Opa3I1kEs/YJGsv02ECja9xsMBAWNqhzR2uAnT/mfMEZQzvtz4CoqngeXvi5h0p8gCBZkseAJjDJvESRl0TWQkv2k40VSEidG8aj9eut9mlBgaguY6BV+4gu2WtzJXkRR5ePFBbss9kkGUY98f+QWsjQ+3D9sQBoGEvw9MHGcTlX0ytyCgzviov8jD/xTQ4ODgnCILTRvWEjRj2cpcky/JsR0eH/X3KGgwPKIryoWfrNkY3mzxWL7ZcL9syjs/AwMAboiieLSoqqs6HgBtyjbNcLc5Fo1F/T0/Pl46xdxe72MX/A/8BZuI/jFHFgyYAAAAASUVORK5CYII=">
+        <span role="heading" aria-level="2"><!--?lit$066521063$-->Chrome Remote Desktop</span>
+      </div>
+      <div class="card-controls">
+        <!--?lit$066521063$--><!---->
+          <div class="command-entry">
+            <span class="command-name"><!--?lit$066521063$-->Activate the extension</span>
+            <extensions-shortcut-input readonly_=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<div id="main">
+  <cr-input id="input" readonly="" aria-label="Shortcut Activate the extension for Chrome Remote Desktop"><template shadowrootmode="open"><!---->
+<div id="label" class="cr-form-field-label" aria-hidden="true" hidden="">
+  <!--?lit$066521063$-->
+</div>
+<div id="row-container" part="row-container">
+  <div id="input-container">
+    <div id="inner-input-container">
+      <div id="hover-layer"></div>
+      <div id="inner-input-content">
+        <slot name="inline-prefix"></slot>
+        <input id="input" part="input" autocomplete="off" tabindex="0" type="text" readonly="" maxlength="" minlength="" inputmode="" aria-label="Shortcut Activate the extension for Chrome Remote Desktop" aria-invalid="false" placeholder="Not set">
+        <slot name="inline-suffix"></slot>
+      </div>
+    </div>
+    <div id="underline-base"></div>
+    <div id="underline"></div>
+  </div>
+  <slot name="suffix"></slot>
+</div>
+<div id="error" aria-live="assertive"><!--?lit$066521063$--></div></template>
+    <cr-icon-button id="edit" title="Edit" slot="suffix" class="icon-edit no-overlap" aria-label="Edit shortcut Activate the extension for Chrome Remote Desktop" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+</div></template>
+    </cr-icon-button>
+  </cr-input>
+</div>
+<!--_html_template_end_--></template>
+            </extensions-shortcut-input>
+            <select class="md-select" data-extension-id="inomeogfingihgjfjlpeplalcfajhgai" data-command-name="_execute_action" aria-label="Scope of Activate the extension for Chrome Remote Desktop" disabled="">
+              <option value="CHROME">
+                In Chrome
+              </option>
+              <option value="GLOBAL">
+                Global
+              </option>
+            </select>
+          </div><!---->
+      </div>
+    </div><!----><!---->
+    <div class="shortcut-card">
+      <div class="card-title cr-title-text">
+        <img class="icon" alt="" src="data:image/png;base64,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">
+        <span role="heading" aria-level="2"><!--?lit$066521063$-->NeoExamShield</span>
+      </div>
+      <div class="card-controls">
+        <!--?lit$066521063$--><!---->
+          <div class="command-entry">
+            <span class="command-name"><!--?lit$066521063$-->Activate the extension</span>
+            <extensions-shortcut-input readonly_=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<div id="main">
+  <cr-input id="input" aria-label="Shortcut Activate the extension for NeoExamShield" readonly=""><template shadowrootmode="open"><!---->
+<div id="label" class="cr-form-field-label" aria-hidden="true" hidden="">
+  <!--?lit$066521063$-->
+</div>
+<div id="row-container" part="row-container">
+  <div id="input-container">
+    <div id="inner-input-container">
+      <div id="hover-layer"></div>
+      <div id="inner-input-content">
+        <slot name="inline-prefix"></slot>
+        <input id="input" part="input" autocomplete="off" tabindex="0" type="text" maxlength="" minlength="" inputmode="" aria-label="Shortcut Activate the extension for NeoExamShield" aria-invalid="false" placeholder="Shortcut set: Ctrl + Y" readonly="">
+        <slot name="inline-suffix"></slot>
+      </div>
+    </div>
+    <div id="underline-base"></div>
+    <div id="underline"></div>
+  </div>
+  <slot name="suffix"></slot>
+</div>
+<div id="error" aria-live="assertive"><!--?lit$066521063$--></div></template>
+    <cr-icon-button id="edit" title="Edit" slot="suffix" class="icon-edit no-overlap" aria-label="Edit shortcut Activate the extension for NeoExamShield" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+</div><cr-ripple id="ink"><template shadowrootmode="open"><!----></template></cr-ripple></template>
+    </cr-icon-button>
+  </cr-input>
+</div>
+<!--_html_template_end_--></template>
+            </extensions-shortcut-input>
+            <select class="md-select" data-extension-id="deojfdehldjjfmcjcfaojgaibalafifc" data-command-name="_execute_action" aria-label="Scope of Activate the extension for NeoExamShield" disabled="">
+              <option value="CHROME">
+                In Chrome
+              </option>
+              <option value="GLOBAL">
+                Global
+              </option>
+            </select>
+          </div><!---->
+      </div>
+    </div><!----><!---->
+    <div class="shortcut-card">
+      <div class="card-title cr-title-text">
+        <img class="icon" alt="" src="data:image/png;base64,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">
+        <span role="heading" aria-level="2"><!--?lit$066521063$-->React Developer Tools</span>
+      </div>
+      <div class="card-controls">
+        <!--?lit$066521063$--><!---->
+          <div class="command-entry">
+            <span class="command-name"><!--?lit$066521063$-->Activate the extension</span>
+            <extensions-shortcut-input readonly_=""><template shadowrootmode="open"><!----><!--_html_template_start_-->
+<div id="main">
+  <cr-input id="input" readonly="" aria-label="Shortcut Activate the extension for React Developer Tools"><template shadowrootmode="open"><!---->
+<div id="label" class="cr-form-field-label" aria-hidden="true" hidden="">
+  <!--?lit$066521063$-->
+</div>
+<div id="row-container" part="row-container">
+  <div id="input-container">
+    <div id="inner-input-container">
+      <div id="hover-layer"></div>
+      <div id="inner-input-content">
+        <slot name="inline-prefix"></slot>
+        <input id="input" part="input" autocomplete="off" tabindex="0" type="text" readonly="" maxlength="" minlength="" inputmode="" aria-label="Shortcut Activate the extension for React Developer Tools" aria-invalid="false" placeholder="Not set">
+        <slot name="inline-suffix"></slot>
+      </div>
+    </div>
+    <div id="underline-base"></div>
+    <div id="underline"></div>
+  </div>
+  <slot name="suffix"></slot>
+</div>
+<div id="error" aria-live="assertive"><!--?lit$066521063$--></div></template>
+    <cr-icon-button id="edit" title="Edit" slot="suffix" class="icon-edit no-overlap" aria-label="Edit shortcut Activate the extension for React Developer Tools" role="button" tabindex="0" aria-disabled="false"><template shadowrootmode="open"><!---->
+<div id="icon">
+  <div id="maskedImage"></div>
+</div></template>
+    </cr-icon-button>
+  </cr-input>
+</div>
+<!--_html_template_end_--></template>
+            </extensions-shortcut-input>
+            <select class="md-select" data-extension-id="fmkadmapgofadopljbjfkapdkoienihi" data-command-name="_execute_action" aria-label="Scope of Activate the extension for React Developer Tools" disabled="">
+              <option value="CHROME">
+                In Chrome
+              </option>
+              <option value="GLOBAL">
+                Global
+              </option>
+            </select>
+          </div><!---->
+      </div>
+    </div><!---->
+</div>
+<!--_html_template_end_--></template>
+        </extensions-keyboard-shortcuts><cr-lazy-render-lit id="keyboard-shortcuts"><template shadowrootmode="open"><!----><!--?--></template>
+    </cr-lazy-render-lit>
+    <cr-lazy-render-lit id="error-page"><template shadowrootmode="open"><!----><!--?--></template>
+    </cr-lazy-render-lit>
+  </cr-view-manager>
+  <div id="right"></div>
+<div></div></div>
+<!--?lit$066521063$-->
+<!--?lit$066521063$-->
+<!--?lit$066521063$-->
+<cr-toast-manager><template shadowrootmode="open"><!---->
+<cr-toast id="toast"><template shadowrootmode="open"><!----><slot></slot></template>
+  <div id="content" class="elided-text"></div>
+  <slot id="slotted"></slot>
+</cr-toast></template></cr-toast-manager>
+<!--_html_template_end_--></template></extensions-manager>
+  <link rel="stylesheet" href="chrome://resources/css/text_defaults_md.css">
+
+
+<cr-a11y-announcer><template shadowrootmode="open"><!--_html_template_start_--><style>:host{clip:rect(0 0 0 0);height:1px;overflow:hidden;position:fixed;width:1px}</style>
+
+<div id="messages" role="alert" aria-live="polite" aria-relevant="additions"><div>Shortcut set: Ctrl + Y</div></div>
+<!--_html_template_end_--></template></cr-a11y-announcer></body></html>

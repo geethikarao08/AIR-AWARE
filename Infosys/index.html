@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <!-- FORM SECTION -->
+        <div class="row">
+            <!-- SIGN UP -->
+            <div class="col align-items-center flex-col sign-up">
+                <div class="form-wrapper align-items-center">
+                    <div class="form sign-up">
+                        <div class="input-group">
+                            <input type="text" id="signup-username" placeholder="Username">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="signup-email" placeholder="Email">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="signup-password" placeholder="Password">
+                        </div>
+                        <button onclick="handleSignup()">Sign up</button>
+                        <p>
+                            <span>Already have an account?</span>
+                            <b onclick="toggle()" class="pointer">Sign in here</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- SIGN IN -->
+            <div class="col align-items-center flex-col sign-in">
+                <div class="form-wrapper align-items-center">
+                    <div class="form sign-in">
+                        <div class="input-group">
+                            <input type="text" id="signin-username" placeholder="Username">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="signin-password" placeholder="Password">
+                        </div>
+                        <button onclick="handleSignin()">Sign in</button>
+                        <p>
+                            <span>Don't have an account?</span>
+                            <b onclick="toggle()" class="pointer">Sign up here</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
